@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://xrwjgdj22pg4"]
+
+[ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="1_i0hfw"]
+
+[node name="ClickAreaSpawner" type="Polygon2D"]
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_i0hfw")

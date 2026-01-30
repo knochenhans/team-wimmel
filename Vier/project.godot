@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Vier"
+run/main_scene="uid://d31yuls6jr21p"
+config/features=PackedStringArray("4.6", "C#", "Mobile")
+config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://1vxte0cgo5ui"
+
+[display]
+
+window/stretch/scale_mode="integer"
+
+[dotnet]
+
+project/assembly_name="Vier"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/Logger/plugin.cfg", "res://addons/SceneManager/plugin.cfg")
+
+[global_group]
+
+saveable=""
+entity=""
+exit=""
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="exits"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

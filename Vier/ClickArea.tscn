@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvlqukkrsdcl7"]
+
+[ext_resource type="Script" uid="uid://ce3wps4l3n28o" path="res://ClickArea.cs" id="1_r76l1"]
+
+[node name="ClickArea" type="Area2D"]
+script = ExtResource("1_r76l1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

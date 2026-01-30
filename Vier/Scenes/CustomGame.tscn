@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://b46xhre03dhm8"]
+
+[ext_resource type="Script" uid="uid://y3mca5ug3oee" path="res://Scenes/CustomGame.cs" id="2_7cnhq"]
+[ext_resource type="PackedScene" uid="uid://7101rmcld8pv" path="res://Scenes/1.tscn" id="2_v0k87"]
+[ext_resource type="PackedScene" uid="uid://3dyfxoyhxipj" path="res://addons/SceneManager/Widgets/OptionsWidget.tscn" id="3_7cnhq"]
+[ext_resource type="PackedScene" uid="uid://cexj1jowvvimv" path="res://Scenes/2.tscn" id="3_30bgp"]
+[ext_resource type="PackedScene" uid="uid://ckeidvpi72g3b" path="res://addons/NotificationsManager/NotificationManager.tscn" id="3_rl2g2"]
+[ext_resource type="PackedScene" uid="uid://dcb7qlpahqogd" path="res://Scenes/3.tscn" id="4_gie2c"]
+[ext_resource type="PackedScene" uid="uid://ddfbn05780mqq" path="res://addons/SceneManager/Nodes/HUD.tscn" id="4_v0k87"]
+[ext_resource type="PackedScene" uid="uid://bjitbp7jtrsem" path="res://addons/ToolTipManager/TooltipManager.tscn" id="6_jlq67"]
+[ext_resource type="PackedScene" uid="uid://csatjfkt4ln35" path="res://CustomTooltip.tscn" id="7_dn8ah"]
+[ext_resource type="PackedScene" uid="uid://cby23l4t3id0f" path="res://TextOutput.tscn" id="9_xvymb"]
+
+[node name="GameScene" type="Node" node_paths=PackedStringArray("Camera")]
+script = ExtResource("2_7cnhq")
+Locations = Dictionary[String, PackedScene]({
+"1": ExtResource("2_v0k87"),
+"2": ExtResource("3_30bgp"),
+"3": ExtResource("4_gie2c")
+})
+StartingLocationID = "1"
+Camera = NodePath("Camera2D")
+WidgetScenes = Dictionary[String, PackedScene]({
+"options": ExtResource("3_7cnhq")
+})
+LoadingFadeDuration = 0.0
+DontFadeInOnStart = true
+FadeInTime = 0.0
+FadeOutTime = 0.0
+
+[node name="SceneBackground" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LifeTimer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_enabled = false
+
+[node name="FixedCanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 2
+
+[node name="TooltipManager" parent="FixedCanvasLayer" node_paths=PackedStringArray("TooltipParentNode") instance=ExtResource("6_jlq67")]
+unique_name_in_owner = true
+TooltipScene = ExtResource("7_dn8ah")
+TooltipParentNode = NodePath(".")
+
+[node name="Widgets" type="Control" parent="FixedCanvasLayer"]
+unique_name_in_owner = true
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NotificationManager" parent="FixedCanvasLayer" instance=ExtResource("3_rl2g2")]
+unique_name_in_owner = true
+NotificationOffset = Vector2(5, 5)
+
+[node name="TextOutput" parent="FixedCanvasLayer" instance=ExtResource("9_xvymb")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+offset_top = -43.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="UIContainer" type="MarginContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="VBoxContainer" parent="CanvasLayer/UIContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HUD" parent="CanvasLayer/UIContainer/Container" instance=ExtResource("4_v0k87")]
+unique_name_in_owner = true

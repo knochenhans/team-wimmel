@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcb7qlpahqogd"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_2bsll"]
+[ext_resource type="Texture2D" uid="uid://bp1vap1376inb" path="res://Resources/Images/3.jpg" id="2_2bsll"]
+[ext_resource type="PackedScene" uid="uid://xrwjgdj22pg4" path="res://ClickAreaSpawner.tscn" id="3_p33bi"]
+
+[node name="3" instance=ExtResource("1_2bsll")]
+ID = "3"
+
+[node name="BackgroundSprite2D" parent="." index="0"]
+texture = ExtResource("2_2bsll")
+
+[node name="1" parent="ClickAreas" index="0" instance=ExtResource("3_p33bi")]
+position = Vector2(1278.7112, -2225.2437)
+polygon = PackedVector2Array(-3016.7112, 1586.2437, -2515.7112, 1600.2437, -2474.7112, 2638.2437, -2993.7112, 2652.2437)
+ID = "test"
+DisplayName = "Tests"
+Description = "Test"
+ActionID = "use"
+TargetLocationID = "1"

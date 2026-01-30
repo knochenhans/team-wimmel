@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://7101rmcld8pv"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_30x3x"]
+[ext_resource type="Texture2D" uid="uid://b43lybrcq83fp" path="res://Resources/Images/1.jpg" id="2_6aodu"]
+[ext_resource type="PackedScene" uid="uid://xrwjgdj22pg4" path="res://ClickAreaSpawner.tscn" id="3_6aodu"]
+
+[node name="1" unique_id=1497449292 instance=ExtResource("1_30x3x")]
+ID = "1"
+
+[node name="BackgroundSprite2D" parent="." index="0"]
+texture = ExtResource("2_6aodu")
+
+[node name="1" parent="ClickAreas" index="0" unique_id=1875385588 instance=ExtResource("3_6aodu")]
+position = Vector2(1278.7112, -2225.2437)
+polygon = PackedVector2Array(-2415.7112, 2730.2437, -2046.7112, 2943.2437, -1742.7112, 2947.2437, -1716.7112, 2297.2437, -2077.7112, 2309.2437, -2433.7112, 2544.2437)
+ID = "tram_car"
+DisplayName = "Tram Car"
+Description = "This tram car looks old and abandoned."
+ActionID = "use"
+TargetLocationID = "2"
+ZoomAmount = 1.6
+
+[node name="2" parent="ClickAreas" index="1" unique_id=157781442 instance=ExtResource("3_6aodu")]
+polygon = PackedVector2Array(-355, 147, -355, 427, 1843, 569, 1713, -262)
+ID = "windows"
+Description = "Empty storefront windows."

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cexj1jowvvimv"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_jtigg"]
+[ext_resource type="Texture2D" uid="uid://1qa3fbq0108" path="res://Resources/Images/2.jpg" id="2_jtigg"]
+[ext_resource type="PackedScene" uid="uid://xrwjgdj22pg4" path="res://ClickAreaSpawner.tscn" id="3_goqd5"]
+[ext_resource type="AudioStream" uid="uid://7qaixwi8b1fq" path="res://Resources/Sounds/loop1.ogg" id="4_3gqcc"]
+
+[node name="2" instance=ExtResource("1_jtigg")]
+ID = "2"
+
+[node name="BackgroundSprite2D" parent="." index="0"]
+texture = ExtResource("2_jtigg")
+
+[node name="1" parent="ClickAreas" index="0" instance=ExtResource("3_goqd5")]
+position = Vector2(1278.7112, -2225.2437)
+polygon = PackedVector2Array(-1374.7112, 3727.2437, -1397.7112, 3827.2437, -1163.7112, 3849.2437, -1197.7112, 3738.2437, -1247.7112, 3727.2437, -1252.7112, 3571.2437, -1213.7112, 3532.2437, -1219.7112, 3343.2437, -1363.7112, 3360.2437, -1324.7112, 3538.2437, -1297.7112, 3682.2437)
+ID = "tram_lever"
+DisplayName = "Tram Lever"
+Description = "The tram’s control lever. With the motor running, it might still move the tram."
+ActionID = "use"
+TargetLocationID = "3"
+ZoomAmount = 2.0
+
+[node name="2" parent="ClickAreas" index="1" instance=ExtResource("3_goqd5")]
+polygon = PackedVector2Array(-1153, 323, -1181, 440, -1192, 540, -1103, 551, -1053, 284)
+ID = "figure"
+DisplayName = "Figure"
+Description = "A figure standing in the street, like frozen in mid-move."
+
+[node name="MusicPlayer" parent="." index="2"]
+stream = ExtResource("4_3gqcc")
+autoplay = true
+bus = &"Master"

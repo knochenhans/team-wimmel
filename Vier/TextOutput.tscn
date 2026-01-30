@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cby23l4t3id0f"]
+
+[ext_resource type="Theme" uid="uid://nvo51wat5fmn" path="res://Resources/Theme.tres" id="1_7ky1u"]
+[ext_resource type="Script" uid="uid://bdo11gbgdld73" path="res://TextOutput.cs" id="2_2ly51"]
+[ext_resource type="PackedScene" uid="uid://bxe6i3ypewns8" path="res://addons/Typer/TyperNode.tscn" id="3_ejoq2"]
+[ext_resource type="FontFile" uid="uid://df4tletdksl5r" path="res://Resources/Fonts/ReenieBeanie.ttf" id="4_x17ph"]
+[ext_resource type="AudioStream" uid="uid://g3xsf6ius1yc" path="res://Resources/Sounds/scribble.ogg" id="5_khvbk"]
+[ext_resource type="Script" uid="uid://2mbp4mggrsra" path="res://addons/Typer/TyperResource.cs" id="5_x17ph"]
+
+[sub_resource type="Resource" id="Resource_2md6u"]
+script = ExtResource("5_x17ph")
+Font = ExtResource("4_x17ph")
+FontSize = 32
+CenterHorizontally = true
+CenterVertically = true
+CaretBlinkTime = 0.0
+FinalCaretBlinkTimes = 0
+TypingSound = ExtResource("5_khvbk")
+LoopTypingSound = true
+TypingSpeed = 0.05
+FadeoutTime = 0.0
+
+[node name="TextOutput" type="PanelContainer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_7ky1u")
+script = ExtResource("2_2ly51")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "test"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Typer" parent="MarginContainer/ScrollContainer" instance=ExtResource("3_ejoq2")]
+unique_name_in_owner = true
+layout_mode = 2
+Resource = SubResource("Resource_2md6u")

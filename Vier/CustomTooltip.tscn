@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://csatjfkt4ln35"]
+
+[ext_resource type="Theme" uid="uid://nvo51wat5fmn" path="res://Resources/Theme.tres" id="1_buwsk"]
+[ext_resource type="Script" uid="uid://52yeqt44mb66" path="res://addons/ToolTipManager/Tooltip.cs" id="1_jr8vg"]
+
+[node name="Tooltip" type="PanelContainer"]
+z_index = 100
+z_as_relative = false
+offset_right = 32.0
+offset_bottom = 17.0
+mouse_filter = 2
+theme = ExtResource("1_buwsk")
+script = ExtResource("1_jr8vg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "test"
+
+[node name="ProgressBarContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
