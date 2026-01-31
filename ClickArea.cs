@@ -1,6 +1,4 @@
 using Godot;
-using System;
-using System.Drawing;
 
 public partial class ClickArea : Area2D
 {
@@ -12,11 +10,13 @@ public partial class ClickArea : Area2D
 
     [Export] public string ActionID = "";
     [Export] public string TargetLocationID = "";
+    [Export] public AudioStream SoundOnClick;
 
     [Export] public float FadeInDuration = 1.0f;
     [Export] public float FadeOutDuration = 1.0f;
     [Export] public float ZoomDuration = 1.0f;
     [Export] public float ZoomAmount = 1.2f;
+    [Export] public float PauseBeforeChange = 0.0f;
 
     public override void _InputEvent(Viewport viewport, InputEvent @event, int shapeIdx)
     {

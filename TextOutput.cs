@@ -24,7 +24,7 @@ public partial class TextOutput : PanelContainer
     #region [Public]
     public void UpdateText(string text)
     {
-        Typer.PushText(text);
+        // Typer.PushText(text);
     }
 
     public void Clear()

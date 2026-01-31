@@ -7,6 +7,8 @@ public partial class CustomGame : BaseGame
     [Export] Dictionary<string, PackedScene> Locations = [];
     [Export] string StartingLocationID = "";
 
+    AudioStreamPlayer2D SoundAudioStreamPlayer2D => GetNode<AudioStreamPlayer2D>("%SoundAudioStreamPlayer2D");
+
     GameLocation currentLocation;
 
     TextOutput TextOutput => GetNode<TextOutput>("%TextOutput");
@@ -62,6 +64,7 @@ public partial class CustomGame : BaseGame
                 location.LocationChanged += ChangeLocation;
                 location.ClickAreaMouseEntered += OnClickAreaMouseEntered;
                 location.ClickAreaMouseExited += OnClickAreaMouseExited;
+                location.PlaySound += OnPlaySound;
             }
 
             if (fadeInDuration == default)
@@ -94,6 +97,15 @@ public partial class CustomGame : BaseGame
 
         GD.Print($"Mouse Exited ClickArea: {clickArea.DisplayName} (ID: {clickArea.ID})");
         TextOutput.Clear();
+    }
+
+    public void OnPlaySound(AudioStream audioStream)
+    {
+        if (audioStream == null)
+            return;
+
+        SoundAudioStreamPlayer2D.Stream = audioStream;
+        SoundAudioStreamPlayer2D.Play();
     }
     #endregion
 }

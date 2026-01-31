@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://b46xhre03dhm8"]
 
 [ext_resource type="Script" uid="uid://y3mca5ug3oee" path="res://Scenes/CustomGame.cs" id="2_7cnhq"]
-[ext_resource type="PackedScene" uid="uid://7101rmcld8pv" path="res://Scenes/1.tscn" id="2_v0k87"]
+[ext_resource type="PackedScene" uid="uid://7101rmcld8pv" path="res://Scenes/maske_fragment_1_suche.tscn" id="2_v0k87"]
 [ext_resource type="PackedScene" uid="uid://3dyfxoyhxipj" path="res://addons/SceneManager/Widgets/OptionsWidget.tscn" id="3_7cnhq"]
-[ext_resource type="PackedScene" uid="uid://cexj1jowvvimv" path="res://Scenes/2.tscn" id="3_30bgp"]
+[ext_resource type="PackedScene" uid="uid://ck7nsxth0iha" path="res://Scenes/hub_leer.tscn" id="3_dn8ah"]
 [ext_resource type="PackedScene" uid="uid://ckeidvpi72g3b" path="res://addons/NotificationsManager/NotificationManager.tscn" id="3_rl2g2"]
-[ext_resource type="PackedScene" uid="uid://dcb7qlpahqogd" path="res://Scenes/3.tscn" id="4_gie2c"]
 [ext_resource type="PackedScene" uid="uid://ddfbn05780mqq" path="res://addons/SceneManager/Nodes/HUD.tscn" id="4_v0k87"]
+[ext_resource type="PackedScene" uid="uid://cpmnyo1gn2vng" path="res://Scenes/maske_fragment_1.tscn" id="4_xvymb"]
+[ext_resource type="PackedScene" uid="uid://cf2es5nquhfvg" path="res://Scenes/maske_fragment_1_detail.tscn" id="5_n7jbs"]
+[ext_resource type="PackedScene" uid="uid://cvrb5y54uht6u" path="res://Scenes/altar_leer_detail.tscn" id="6_asmga"]
 [ext_resource type="PackedScene" uid="uid://bjitbp7jtrsem" path="res://addons/ToolTipManager/TooltipManager.tscn" id="6_jlq67"]
 [ext_resource type="PackedScene" uid="uid://csatjfkt4ln35" path="res://CustomTooltip.tscn" id="7_dn8ah"]
 [ext_resource type="PackedScene" uid="uid://cby23l4t3id0f" path="res://TextOutput.tscn" id="9_xvymb"]
@@ -14,16 +16,19 @@
 [node name="GameScene" type="Node" unique_id=872207046 node_paths=PackedStringArray("Camera")]
 script = ExtResource("2_7cnhq")
 Locations = Dictionary[String, PackedScene]({
-"1": ExtResource("2_v0k87"),
-"2": ExtResource("3_30bgp"),
-"3": ExtResource("4_gie2c")
+"altar_leer_detail": ExtResource("6_asmga"),
+"hub_leer": ExtResource("3_dn8ah"),
+"maske_fragment_1": ExtResource("4_xvymb"),
+"maske_fragment_1_detail": ExtResource("5_n7jbs"),
+"maske_fragment_1_suche": ExtResource("2_v0k87")
 })
-StartingLocationID = "1"
+StartingLocationID = "maske_fragment_1_suche"
 Camera = NodePath("Camera2D")
 WidgetScenes = Dictionary[String, PackedScene]({
 "options": ExtResource("3_7cnhq")
 })
 LoadingFadeDuration = 0.0
+PlayUIMusic = true
 DontFadeInOnStart = true
 FadeInTime = 0.0
 FadeOutTime = 0.0
@@ -91,3 +96,7 @@ size_flags_vertical = 0
 
 [node name="HUD" parent="CanvasLayer/UIContainer/Container" unique_id=2060708808 instance=ExtResource("4_v0k87")]
 unique_name_in_owner = true
+
+[node name="SoundAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1722523208]
+unique_name_in_owner = true
+bus = &"SFX"

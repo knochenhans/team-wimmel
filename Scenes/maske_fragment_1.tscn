@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cpmnyo1gn2vng"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_cdclj"]
+[ext_resource type="Texture2D" uid="uid://dcm4gbi0scvhb" path="res://Resources/Hub/Images/maske_fragment_1.png" id="2_df1ce"]
+[ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="4_53svj"]
+
+[node name="maske_fragment_1" unique_id=1497449292 instance=ExtResource("1_cdclj")]
+ID = "1"
+
+[node name="BackgroundSprite2D" parent="." index="0"]
+texture = ExtResource("2_df1ce")
+
+[node name="Altar" type="Polygon2D" parent="ClickAreas" index="0" unique_id=151782370]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(99, -56, 103, 83, 86, 95, 87, 125, 136, 140, 211, 150, 299, 154, 382, 153, 454, 148, 502, 134, 508, 106, 490, 89, 492, 75, 491, -58, 475, -74, 393, -85, 340, -120, 297, -121, 316, -86, 158, -82, 118, -75)
+script = ExtResource("4_53svj")
+ID = "altar"
+ActionID = "use"
+TargetLocationID = "maske_fragment_1_detail"
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"

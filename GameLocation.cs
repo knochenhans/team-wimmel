@@ -15,6 +15,7 @@ public partial class GameLocation : Node
     [Signal] public delegate void ClickAreaMouseEnteredEventHandler(ClickArea clickArea);
     [Signal] public delegate void ClickAreaMouseExitedEventHandler(ClickArea clickArea);
     [Signal] public delegate void LocationChangedEventHandler(string locationID, float fadeInDuration = 1.0f, float fadeOutDuration = 1.0f);
+    [Signal] public delegate void PlaySoundEventHandler(AudioStream audioStream);
 
     Node2D ClickAreaSpawnersNode => GetNode<Node2D>("%ClickAreas");
     Sprite2D BackgroundNode => GetNode<Sprite2D>("%BackgroundSprite2D");
@@ -86,6 +87,7 @@ public partial class GameLocation : Node
         EmitSignal(SignalName.ClickAreaClicked, clickArea);
 
         UISoundPlayer.Instance.PlaySound("click1");
+        EmitSignal(SignalName.PlaySound, clickArea.SoundOnClick);
 
         if (string.IsNullOrEmpty(clickArea.TargetLocationID))
             return;
@@ -98,6 +100,9 @@ public partial class GameLocation : Node
         Vector2 targetPosition = Camera.GetGlobalMousePosition();
         var zoomTask = TweenZoomAtPoint(clickArea.ZoomDuration, targetPosition, Camera.Zoom.X * clickArea.ZoomAmount);
         var fadeTask = SceneManager.Instance.FadeOut(clickArea.FadeOutDuration);
+
+        await Task.Delay((int)(clickArea.PauseBeforeChange * 1000));
+
         var volumeTask = TweenVolumeTo(MusicPlayer, -80.0f, clickArea.FadeOutDuration);
         await Task.WhenAll(zoomTask, fadeTask, volumeTask);
 

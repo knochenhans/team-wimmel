@@ -20,6 +20,15 @@ resource_name = "HighShelfFilter"
 cutoff_hz = 3708.0
 gain = 0.31
 
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_hg3mo"]
+resource_name = "Reverb"
+wet = 0.15
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_hg3mo"]
+resource_name = "Delay"
+tap1_level_db = -12.0
+tap2_level_db = -24.0
+
 [resource]
 bus/1/name = &"Music"
 bus/1/solo = false
@@ -45,3 +54,7 @@ bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 0.0
 bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectReverb_hg3mo")
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource("AudioEffectDelay_hg3mo")
+bus/2/effect/1/enabled = true

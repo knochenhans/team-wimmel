@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3pkdacthr61v"
+path="res://.godot/imported/Spinnenraum Hintergrund.ogg-9d5d16af63f78d3b5e22c6a34264efbb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Spinnenraum/Music/Spinnenraum Hintergrund.ogg"
+dest_files=["res://.godot/imported/Spinnenraum Hintergrund.ogg-9d5d16af63f78d3b5e22c6a34264efbb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

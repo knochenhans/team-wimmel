@@ -13,13 +13,14 @@
 [ext_resource type="Script" uid="uid://f5l6oiy0yfp7" path="res://addons/SoundSet/SoundDatabase.cs" id="10_c2ibq"]
 [ext_resource type="Resource" uid="uid://cgfckxqo5ypkf" path="res://addons/SoundSet/Resources/StepSoundsDatabase.tres" id="10_j4qnp"]
 [ext_resource type="Script" uid="uid://bqak1oe3ef0rw" path="res://addons/GameUtils/CursorSetResource.cs" id="10_kjvhd"]
-[ext_resource type="Texture2D" uid="uid://pttckv8tgiye" path="res://Resources_old/Images/Cursors/Magnifier32.png" id="11_2gh4u"]
-[ext_resource type="Texture2D" uid="uid://6i1l8qopf28l" path="res://Resources_old/Images/Cursors/Arrow32.png" id="12_2gh4u"]
-[ext_resource type="Texture2D" uid="uid://coy8tk73yesps" path="res://Resources_old/Images/Cursors/Hand32.png" id="13_2gh4u"]
+[ext_resource type="Texture2D" uid="uid://do5majpjh54oa" path="res://Resources/Images/UI/Cursors/Pfeil.png" id="11_2gh4u"]
+[ext_resource type="Texture2D" uid="uid://qgrwlly1lxej" path="res://Resources/Images/UI/Cursors/Eye.png" id="12_devvj"]
+[ext_resource type="Texture2D" uid="uid://b368n4f3ais1n" path="res://Resources/Images/UI/Cursors/hand.png" id="13_2gh4u"]
 [ext_resource type="PackedScene" uid="uid://dgbmno8m15yrd" path="res://addons/UISoundPlayer/UISoundPlayer.tscn" id="15_sc1dx"]
 [ext_resource type="AudioStream" uid="uid://cohiv50cb8wvw" path="res://addons/UISoundPlayer/Sounds/click2.wav" id="16_kjvhd"]
 [ext_resource type="Script" uid="uid://bcbe7wlf5oben" path="res://addons/SoundSet/SimpleSoundSetResource.cs" id="17_5tuhn"]
 [ext_resource type="AudioStream" uid="uid://316myh4e6vk3" path="res://addons/UISoundPlayer/Sounds/click4.wav" id="17_kjvhd"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="21_devvj"]
 
 [sub_resource type="Resource" id="Resource_hhcpw"]
 script = ExtResource("6_5vvyt")
@@ -35,20 +36,20 @@ metadata/_custom_type_script = "uid://q5kvegfjxjon"
 
 [sub_resource type="Resource" id="Resource_3b0ty"]
 script = ExtResource("10_kjvhd")
-Texture = ExtResource("12_2gh4u")
-Hotspot = Vector2(2, 2)
+Texture = ExtResource("11_2gh4u")
+Hotspot = Vector2(15, 8)
 metadata/_custom_type_script = "uid://bqak1oe3ef0rw"
 
 [sub_resource type="Resource" id="Resource_devvj"]
 script = ExtResource("10_kjvhd")
-Texture = ExtResource("11_2gh4u")
-Hotspot = Vector2(10, 10)
+Texture = ExtResource("12_devvj")
+Hotspot = Vector2(30, 30)
 metadata/_custom_type_script = "uid://bqak1oe3ef0rw"
 
 [sub_resource type="Resource" id="Resource_bg4s2"]
 script = ExtResource("10_kjvhd")
 Texture = ExtResource("13_2gh4u")
-Hotspot = Vector2(4, 1)
+Hotspot = Vector2(16, 12)
 metadata/_custom_type_script = "uid://bqak1oe3ef0rw"
 
 [sub_resource type="Resource" id="Resource_2gh4u"]
@@ -80,3 +81,4 @@ FallbackSoundSetID = "grass"
 
 [node name="UISoundPlayer" parent="." unique_id=2070007709 instance=ExtResource("15_sc1dx")]
 UISoundResource = SubResource("Resource_2gh4u")
+DefaultMusic = ExtResource("21_devvj")
