@@ -12,7 +12,7 @@ texture = ExtResource("2_d7yum")
 
 [node name="Exit" type="Polygon2D" parent="ClickAreas" index="0" unique_id=1273232935]
 color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(-950, -212, -453, -185, -437, 468, 617, 495, 665, -132, 970, -127, 965, 552, -991, 555, -987, -216)
+polygon = PackedVector2Array(28, -244, -220, -168, -337, -36, -317, 257, -360, 368, -333, 494, -268, 543, -991, 555, -962, -546, 951, -538, 975, 547, 729, 539, 760, 418, 720, 305, 759, 75, 747, 32, 747, -20, 640, -153, 380, -242)
 script = ExtResource("3_ac6gx")
 ID = "maske_fragment_1"
 ActionID = "use"

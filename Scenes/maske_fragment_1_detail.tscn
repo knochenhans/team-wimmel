@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://cf2es5nquhfvg"]
 
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_0a64w"]
-[ext_resource type="Texture2D" uid="uid://cjm7xtagpil04" path="res://Resources/Hub/Images/maske_fragment_1_detail.png" id="2_olhtb"]
-[ext_resource type="Texture2D" path="res://Resources/Hub/Images/maske_fragment_1_detail.png" id="3_e7xmi"]
+[ext_resource type="Texture2D" uid="uid://cjm7xtagpil04" path="res://Resources/Hub/Images/maske_fragment_1_detail.png" id="3_e7xmi"]
 [ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="4_mvjcb"]
 
 [node name="maske_fragment_1_detail" unique_id=1497449292 instance=ExtResource("1_0a64w")]
 ID = "1"
 
 [node name="BackgroundSprite2D" parent="." index="0"]
-texture = ExtResource("2_olhtb")
+texture = ExtResource("3_e7xmi")
 
 [node name="BackgroundSprite2D_Leer" type="Sprite2D" parent="." index="1" unique_id=1782263186]
 unique_name_in_owner = true
@@ -18,7 +17,7 @@ texture = ExtResource("3_e7xmi")
 
 [node name="Exit" type="Polygon2D" parent="ClickAreas" index="0" unique_id=1273232935]
 color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(-950, -212, -453, -185, -437, 468, 617, 495, 665, -132, 970, -127, 965, 552, -991, 555, -987, -216)
+polygon = PackedVector2Array(28, -244, -220, -168, -337, -36, -317, 257, -360, 368, -333, 494, -268, 543, -991, 555, -962, -546, 951, -538, 975, 547, 729, 539, 760, 418, 720, 305, 759, 75, 747, 32, 747, -20, 640, -153, 380, -242)
 script = ExtResource("4_mvjcb")
 ID = "maske_fragment_1"
 ActionID = "use"
