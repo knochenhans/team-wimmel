@@ -64,7 +64,9 @@ public partial class CustomGame : BaseGame
                 location.LocationChanged += ChangeLocation;
                 location.ClickAreaMouseEntered += OnClickAreaMouseEntered;
                 location.ClickAreaMouseExited += OnClickAreaMouseExited;
-                location.PlaySound += OnPlaySound;
+                location.PlayBackgroundSound += OnPlaySound;
+                location.PlayBackgroundMusic += OnPlayMusic;
+                location.PlayMusic();
             }
 
             if (fadeInDuration == default)
@@ -106,6 +108,14 @@ public partial class CustomGame : BaseGame
 
         SoundAudioStreamPlayer2D.Stream = audioStream;
         SoundAudioStreamPlayer2D.Play();
+    }
+
+    public void OnPlayMusic(AudioStream audioStream)
+    {
+        if (audioStream == null)
+            return;
+
+        UISoundPlayer.Instance.StartOrKeepMusic(audioStream);
     }
     #endregion
 }

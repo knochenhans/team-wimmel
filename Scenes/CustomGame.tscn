@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cvrb5y54uht6u" path="res://Scenes/altar_leer_detail.tscn" id="6_asmga"]
 [ext_resource type="PackedScene" uid="uid://bjitbp7jtrsem" path="res://addons/ToolTipManager/TooltipManager.tscn" id="6_jlq67"]
 [ext_resource type="PackedScene" uid="uid://csatjfkt4ln35" path="res://CustomTooltip.tscn" id="7_dn8ah"]
+[ext_resource type="PackedScene" uid="uid://df2sptyop2gcf" path="res://Scenes/spinnenraum.tscn" id="7_qlf4v"]
 [ext_resource type="PackedScene" uid="uid://cby23l4t3id0f" path="res://TextOutput.tscn" id="9_xvymb"]
 
 [node name="GameScene" type="Node" unique_id=872207046 node_paths=PackedStringArray("Camera")]
@@ -20,7 +21,8 @@ Locations = Dictionary[String, PackedScene]({
 "hub_leer": ExtResource("3_dn8ah"),
 "maske_fragment_1": ExtResource("4_xvymb"),
 "maske_fragment_1_detail": ExtResource("5_n7jbs"),
-"maske_fragment_1_suche": ExtResource("2_v0k87")
+"maske_fragment_1_suche": ExtResource("2_v0k87"),
+"spinnenraum": ExtResource("7_qlf4v")
 })
 StartingLocationID = "maske_fragment_1_suche"
 Camera = NodePath("Camera2D")

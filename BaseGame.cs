@@ -55,7 +55,7 @@ public partial class BaseGame : Scene
 
         GameStateManager.CurrentGameState = BaseGameStateManager.GameState.Loading;
 
-        UISoundPlayer.Instance?.StopMusic();
+        // UISoundPlayer.Instance?.StopMusic();
 
         InitGame();
         InitSaveStateManager();

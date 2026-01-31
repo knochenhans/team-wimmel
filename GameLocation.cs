@@ -10,12 +10,14 @@ public partial class GameLocation : Node
     [Export] public string DisplayName = "";
     [Export] public float FadeInDuration = 1.0f;
     [Export] public float FadeOutDuration = 1.0f;
+    [Export] public AudioStream MusicStream;
 
     [Signal] public delegate void ClickAreaClickedEventHandler(ClickArea clickArea);
     [Signal] public delegate void ClickAreaMouseEnteredEventHandler(ClickArea clickArea);
     [Signal] public delegate void ClickAreaMouseExitedEventHandler(ClickArea clickArea);
     [Signal] public delegate void LocationChangedEventHandler(string locationID, float fadeInDuration = 1.0f, float fadeOutDuration = 1.0f);
-    [Signal] public delegate void PlaySoundEventHandler(AudioStream audioStream);
+    [Signal] public delegate void PlayBackgroundSoundEventHandler(AudioStream audioStream);
+    [Signal] public delegate void PlayBackgroundMusicEventHandler(AudioStream audioStream);
 
     Node2D ClickAreaSpawnersNode => GetNode<Node2D>("%ClickAreas");
     Sprite2D BackgroundNode => GetNode<Sprite2D>("%BackgroundSprite2D");
@@ -71,6 +73,11 @@ public partial class GameLocation : Node
         Camera.Zoom = new Vector2(scale, scale);
     }
 
+    public void PlayMusic()
+    {
+        EmitSignal(SignalName.PlayBackgroundMusic, MusicStream);
+    }
+
     public void FadeInMusic()
     {
         MusicPlayer.VolumeDb = -80.0f;
@@ -87,7 +94,7 @@ public partial class GameLocation : Node
         EmitSignal(SignalName.ClickAreaClicked, clickArea);
 
         UISoundPlayer.Instance.PlaySound("click1");
-        EmitSignal(SignalName.PlaySound, clickArea.SoundOnClick);
+        EmitSignal(SignalName.PlayBackgroundSound, clickArea.SoundOnClick);
 
         if (string.IsNullOrEmpty(clickArea.TargetLocationID))
             return;
