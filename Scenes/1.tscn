@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7101rmcld8pv"]
 
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_30x3x"]
-[ext_resource type="Texture2D" uid="uid://b43lybrcq83fp" path="res://Resources/Images/1.jpg" id="2_6aodu"]
+[ext_resource type="Texture2D" uid="uid://b43lybrcq83fp" path="res://Resources_old/Images/1.jpg" id="2_6aodu"]
 [ext_resource type="PackedScene" uid="uid://xrwjgdj22pg4" path="res://ClickAreaSpawner.tscn" id="3_6aodu"]
 [ext_resource type="PackedScene" uid="uid://clomjjda0tbwt" path="res://Shadow.tscn" id="4_r0nac"]
 
