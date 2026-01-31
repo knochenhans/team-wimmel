@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cf2es5nquhfvg"]
 
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_0a64w"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="2_0a64w"]
 [ext_resource type="Texture2D" uid="uid://cjm7xtagpil04" path="res://Resources/Hub/Images/maske_fragment_1_detail.png" id="3_e7xmi"]
 [ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="4_mvjcb"]
 
 [node name="maske_fragment_1_detail" unique_id=1497449292 instance=ExtResource("1_0a64w")]
 ID = "1"
+MusicStream = ExtResource("2_0a64w")
 
 [node name="BackgroundSprite2D" parent="." index="0"]
 texture = ExtResource("3_e7xmi")

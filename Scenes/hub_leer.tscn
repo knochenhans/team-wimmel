@@ -2,10 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_0prus"]
 [ext_resource type="Texture2D" uid="uid://bppkj7qgyvgwu" path="res://Resources/Hub/Images/hub_leer.png" id="2_0prus"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="2_jrtw3"]
 [ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="3_3exun"]
 
 [node name="hub_leer" unique_id=1497449292 instance=ExtResource("1_0prus")]
 ID = "1"
+MusicStream = ExtResource("2_jrtw3")
 
 [node name="BackgroundSprite2D" parent="." index="0"]
 texture = ExtResource("2_0prus")

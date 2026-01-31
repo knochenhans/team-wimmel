@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cpmnyo1gn2vng"]
 
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_cdclj"]
-[ext_resource type="Texture2D" uid="uid://dcm4gbi0scvhb" path="res://Resources/Hub/Images/maske_fragment_1.png" id="2_df1ce"]
+[ext_resource type="Texture2D" uid="uid://dd3cy4vtesggd" path="res://Resources/Hub/Images/hub_portal_1.png" id="2_df1ce"]
 [ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="4_53svj"]
+[ext_resource type="AudioStream" uid="uid://cyajupb5557bf" path="res://Resources/Sounds/tür.ogg" id="4_cdclj"]
 
 [node name="maske_fragment_1" unique_id=1497449292 instance=ExtResource("1_cdclj")]
 ID = "1"
@@ -17,4 +18,14 @@ script = ExtResource("4_53svj")
 ID = "altar"
 ActionID = "use"
 TargetLocationID = "maske_fragment_1_detail"
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"
+
+[node name="ClickAreaSpawner" type="Polygon2D" parent="ClickAreas" index="1" unique_id=1307897933]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-104, -7, -108, -69, -124, -74, -122, -352, -102, -413, -58, -468, -3, -487, 50, -471, 82, -436, 105, -390, 116, -324, 114, -69, 96, -2)
+script = ExtResource("4_53svj")
+ActionID = "use"
+TargetLocationID = "spinnenraum"
+SoundOnClick = ExtResource("4_cdclj")
+PauseBeforeChange = 1.0
 metadata/_custom_type_script = "uid://b1v7q0j4vsufo"

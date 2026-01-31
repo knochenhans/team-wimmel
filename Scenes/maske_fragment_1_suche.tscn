@@ -2,12 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_2wdno"]
 [ext_resource type="Texture2D" uid="uid://bhf2ke4m3yr36" path="res://Resources/Hub/Images/maske_fragment_1_suche.png" id="2_s2c6k"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="2_til0f"]
 [ext_resource type="PackedScene" uid="uid://xrwjgdj22pg4" path="res://ClickAreaSpawner.tscn" id="3_mn54c"]
-[ext_resource type="AudioStream" uid="uid://bm8icwkm1ch6n" path="res://Resources/Hub/Music/maske_aufnehmen.mp3" id="4_mn54c"]
+[ext_resource type="AudioStream" uid="uid://yn1s4f5kmcjs" path="res://Resources/Hub/Music/maske_ablegen.ogg" id="4_mn54c"]
 [ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="4_s2c6k"]
 
 [node name="maske_fragment_1_suche" unique_id=1497449292 instance=ExtResource("1_2wdno")]
 ID = "maske_fragment_1_suche"
+FadeInDuration = 3.0
+MusicStream = ExtResource("2_til0f")
 
 [node name="BackgroundSprite2D" parent="." index="0"]
 texture = ExtResource("2_s2c6k")

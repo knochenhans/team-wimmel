@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dnr6thpc3nrf6"
+path="res://.godot/imported/Schattenraum Hintergrund.ogg-bafea7f2e3f1b7d87daf22be834f9a61.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Schattenraum/Music/Schattenraum Hintergrund.ogg"
+dest_files=["res://.godot/imported/Schattenraum Hintergrund.ogg-bafea7f2e3f1b7d87daf22be834f9a61.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

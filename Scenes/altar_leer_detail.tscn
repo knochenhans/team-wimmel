@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cvrb5y54uht6u"]
 
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_d7yum"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="2_cve04"]
 [ext_resource type="Texture2D" uid="uid://dqq2p5buqkjmk" path="res://Resources/Hub/Images/altar_leer_detail.png" id="2_d7yum"]
 [ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="3_ac6gx"]
 
 [node name="altar_leer_detail" unique_id=1497449292 instance=ExtResource("1_d7yum")]
 ID = "1"
+MusicStream = ExtResource("2_cve04")
 
 [node name="BackgroundSprite2D" parent="." index="0"]
 texture = ExtResource("2_d7yum")
