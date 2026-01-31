@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://clomjjda0tbwt"]
+
+[ext_resource type="Script" uid="uid://gdsdtd32sye5" path="res://addons/RoundedPolygon2D/RoundedPolygon2D.gd" id="1_cq7cn"]
+[ext_resource type="Script" uid="uid://ckbslb4rln2x3" path="res://Shadow.cs" id="1_qsfen"]
+
+[node name="Shadow" type="Area2D" unique_id=519659542]
+script = ExtResource("1_qsfen")
+
+[node name="RoundedPolygon2D" type="Polygon2D" parent="." unique_id=1462301429]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(80, -426, 686, -120, 759, 552, -1118, 493, -1018, -798)
+polygons = [null]
+script = ExtResource("1_cq7cn")
+corner_radius = 300
+metadata/_custom_type_script = "uid://gdsdtd32sye5"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=50946778]
+polygon = PackedVector2Array(80, -426, 686, -120, 759, 552, -1118, 493, -1018, -798)

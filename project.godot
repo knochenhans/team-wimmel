@@ -33,7 +33,7 @@ project/assembly_name="Vier"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/Logger/plugin.cfg", "res://addons/SceneManager/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/Logger/plugin.cfg", "res://addons/RoundedPolygon2D/plugin.cfg", "res://addons/SceneManager/plugin.cfg")
 
 [global_group]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b46xhre03dhm8"]
+[gd_scene format=3 uid="uid://b46xhre03dhm8"]
 
 [ext_resource type="Script" uid="uid://y3mca5ug3oee" path="res://Scenes/CustomGame.cs" id="2_7cnhq"]
 [ext_resource type="PackedScene" uid="uid://7101rmcld8pv" path="res://Scenes/1.tscn" id="2_v0k87"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://csatjfkt4ln35" path="res://CustomTooltip.tscn" id="7_dn8ah"]
 [ext_resource type="PackedScene" uid="uid://cby23l4t3id0f" path="res://TextOutput.tscn" id="9_xvymb"]
 
-[node name="GameScene" type="Node" node_paths=PackedStringArray("Camera")]
+[node name="GameScene" type="Node" unique_id=872207046 node_paths=PackedStringArray("Camera")]
 script = ExtResource("2_7cnhq")
 Locations = Dictionary[String, PackedScene]({
 "1": ExtResource("2_v0k87"),
@@ -28,7 +28,7 @@ DontFadeInOnStart = true
 FadeInTime = 0.0
 FadeOutTime = 0.0
 
-[node name="SceneBackground" type="ColorRect" parent="."]
+[node name="SceneBackground" type="ColorRect" parent="." unique_id=1596190454]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,21 +38,20 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="LifeTimer" type="Timer" parent="."]
+[node name="LifeTimer" type="Timer" parent="." unique_id=446272103]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1005739816]
 limit_enabled = false
 
-[node name="FixedCanvasLayer" type="CanvasLayer" parent="."]
+[node name="FixedCanvasLayer" type="CanvasLayer" parent="." unique_id=71850726]
 unique_name_in_owner = true
 layer = 2
 
-[node name="TooltipManager" parent="FixedCanvasLayer" node_paths=PackedStringArray("TooltipParentNode") instance=ExtResource("6_jlq67")]
+[node name="TooltipManager" parent="FixedCanvasLayer" unique_id=1948650099 instance=ExtResource("6_jlq67")]
 unique_name_in_owner = true
 TooltipScene = ExtResource("7_dn8ah")
-TooltipParentNode = NodePath(".")
 
-[node name="Widgets" type="Control" parent="FixedCanvasLayer"]
+[node name="Widgets" type="Control" parent="FixedCanvasLayer" unique_id=1709453549]
 unique_name_in_owner = true
 z_index = 100
 layout_mode = 3
@@ -62,20 +61,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NotificationManager" parent="FixedCanvasLayer" instance=ExtResource("3_rl2g2")]
+[node name="NotificationManager" parent="FixedCanvasLayer" unique_id=453075617 instance=ExtResource("3_rl2g2")]
 unique_name_in_owner = true
+visible = false
 NotificationOffset = Vector2(5, 5)
 
-[node name="TextOutput" parent="FixedCanvasLayer" instance=ExtResource("9_xvymb")]
+[node name="TextOutput" parent="FixedCanvasLayer" unique_id=436350729 instance=ExtResource("9_xvymb")]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(0, 100)
 offset_top = -43.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1017110500]
 unique_name_in_owner = true
 visible = false
 
-[node name="UIContainer" type="MarginContainer" parent="CanvasLayer"]
+[node name="UIContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1792625590]
 unique_name_in_owner = true
 anchors_preset = 15
 anchor_right = 1.0
@@ -83,10 +84,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Container" type="VBoxContainer" parent="CanvasLayer/UIContainer"]
+[node name="Container" type="VBoxContainer" parent="CanvasLayer/UIContainer" unique_id=21953161]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="HUD" parent="CanvasLayer/UIContainer/Container" instance=ExtResource("4_v0k87")]
+[node name="HUD" parent="CanvasLayer/UIContainer/Container" unique_id=2060708808 instance=ExtResource("4_v0k87")]
 unique_name_in_owner = true
