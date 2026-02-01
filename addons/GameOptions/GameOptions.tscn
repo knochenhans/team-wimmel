@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfal58ed8k0u3"]
+
+[ext_resource type="Script" uid="uid://bx4wie7vws820" path="res://addons/GameOptions/GameOptions.cs" id="1_xuwka"]
+
+[node name="GameOptions" type="Node"]
+script = ExtResource("1_xuwka")
