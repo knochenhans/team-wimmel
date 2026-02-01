@@ -43,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://cn33y2w87ojfu" path="res://Resources/Chaosraum/chaosraum_spieluhr_offen_suche.tscn" id="34_xnyef"]
 [ext_resource type="PackedScene" uid="uid://cln7a2hmrchjl" path="res://Resources/Chaosraum/chaosraum_spieluhr_offen_leer.tscn" id="35_y65c7"]
 [ext_resource type="PackedScene" uid="uid://vkxirrc1tyi6" path="res://Resources/Outro/Outro.tscn" id="37_y65c7"]
+[ext_resource type="PackedScene" uid="uid://d1hxlutkfjsdt" path="res://Resources/Outro/credits.tscn" id="38_ibped"]
 
 [node name="GameScene" type="Node" unique_id=872207046 node_paths=PackedStringArray("Camera")]
 script = ExtResource("2_7cnhq")
@@ -52,6 +53,7 @@ Locations = Dictionary[String, PackedScene]({
 "chaosraum_geräte": ExtResource("33_cc7pn"),
 "chaosraum_spieluhr_offen_leer": ExtResource("35_y65c7"),
 "chaosraum_spieluhr_offen_suche": ExtResource("34_xnyef"),
+"credits": ExtResource("38_ibped"),
 "hub_leer": ExtResource("3_dn8ah"),
 "hub_portal_1": null,
 "hub_portal_2": null,

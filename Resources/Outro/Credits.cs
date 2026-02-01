@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Outro : GameLocation
+public partial class Credits : GameLocation
 {
     public override void _Input(InputEvent @event)
     {
@@ -9,7 +9,7 @@ public partial class Outro : GameLocation
 
         if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed)
         {
-            _ = ChangeLocation("credits", 1.0f, 1.0f);
+            SceneManager.Instance.Quit();
         }
     }
 }
