@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://6rf04e7g68qx"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_6twfa"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="2_4qwyy"]
+[ext_resource type="Texture2D" uid="uid://8w6jqrb1fohs" path="res://Resources/Hub/Images/hub_portal_2.png" id="2_6twfa"]
+[ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="3_qgpjd"]
+[ext_resource type="AudioStream" uid="uid://cyajupb5557bf" path="res://Resources/Sounds/tür.ogg" id="4_r63gd"]
+
+[node name="maske_fragment_2" unique_id=1497449292 instance=ExtResource("1_6twfa")]
+ID = "1"
+DisplayName = "maske_fragment_1"
+MusicStream = ExtResource("2_4qwyy")
+
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
+texture = ExtResource("2_6twfa")
+
+[node name="Altar" type="Polygon2D" parent="ClickAreas" parent_id_path=PackedInt32Array(987368998) index="0" unique_id=151782370]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(99, -56, 103, 83, 86, 95, 87, 125, 136, 140, 211, 150, 299, 154, 382, 153, 454, 148, 502, 134, 508, 106, 490, 89, 492, 75, 491, -58, 475, -74, 393, -85, 340, -120, 297, -121, 260, -88, 158, -82, 118, -75)
+script = ExtResource("3_qgpjd")
+ID = "altar"
+TargetLocationID = "maske_fragment_2_detail"
+CursorID = "go"
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"
+
+[node name="ClickAreaSpawner" type="Polygon2D" parent="ClickAreas" parent_id_path=PackedInt32Array(987368998) index="1" unique_id=1307897933]
+position = Vector2(543, 4)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-104, -7, -108, -69, -124, -74, -122, -352, -102, -413, -58, -468, -3, -487, 50, -471, 82, -436, 105, -390, 120, -254, 43, -137, 38, -5)
+script = ExtResource("3_qgpjd")
+TargetLocationID = "schattenraum_maske_suche_perspektive_1"
+SoundOnClick = ExtResource("4_r63gd")
+CursorID = "go"
+PauseBeforeChange = 1.0
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"

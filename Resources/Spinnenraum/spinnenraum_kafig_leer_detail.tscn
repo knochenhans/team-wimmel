@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cheba0hc5nsk"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_171h7"]
+[ext_resource type="AudioStream" uid="uid://cb2l2tlt5jtp2" path="res://Resources/Spinnenraum/Music/Spinnenraum_keine_Spinnen_Hintergrund.ogg" id="2_171h7"]
+[ext_resource type="Texture2D" uid="uid://copxo5gm18mmv" path="res://Resources/Spinnenraum/Images/spinnenraum_kaefig_leer_detail.png" id="3_171h7"]
+
+[node name="spinnenraum_kafig_leer_detail" unique_id=1497449292 instance=ExtResource("1_171h7")]
+ID = "spinnenraum_kafig_leer_detail"
+MusicStream = ExtResource("2_171h7")
+WaitDuration = 1.0
+NextLocationID = "maske_fragment_2_detail"
+
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
+texture = ExtResource("3_171h7")

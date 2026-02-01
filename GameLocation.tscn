@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqaojecoqhuip"]
+[gd_scene format=3 uid="uid://bqaojecoqhuip"]
 
 [ext_resource type="Script" uid="uid://c1hyeys7l4l7c" path="res://GameLocation.cs" id="1_j6rok"]
 
 [sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_j6rok"]
 
-[node name="GameLocation" type="Node"]
+[node name="GameLocation" type="Node" unique_id=2087124182]
 script = ExtResource("1_j6rok")
 
-[node name="BackgroundSprite2D" type="Sprite2D" parent="."]
+[node name="BackgroundSprite2D" type="Sprite2D" parent="." unique_id=1575261564]
 unique_name_in_owner = true
 
-[node name="ClickAreas" type="Node2D" parent="."]
+[node name="ClickAreas" type="Node2D" parent="." unique_id=987368998]
 unique_name_in_owner = true
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1827127768]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamGenerator_j6rok")
 bus = &"Music"

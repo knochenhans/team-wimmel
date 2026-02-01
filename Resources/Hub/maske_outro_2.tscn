@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://0wyeb7kcd6cl"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_w4e5c"]
+[ext_resource type="AudioStream" uid="uid://bxwkcae1ua5we" path="res://Resources/Outro/Outro_Music.ogg" id="2_w4e5c"]
+[ext_resource type="Texture2D" uid="uid://j7wy7pxyk6ms" path="res://Resources/Hub/Images/maske_outro_2.png" id="3_w4e5c"]
+
+[node name="maske_outro_2" unique_id=1497449292 instance=ExtResource("1_w4e5c")]
+ID = "1"
+FadeInDuration = 0.8
+FadeOutDuration = 0.8
+MusicStream = ExtResource("2_w4e5c")
+WaitDuration = 0.7
+NextLocationID = "maske_outro_3"
+
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
+texture = ExtResource("3_w4e5c")

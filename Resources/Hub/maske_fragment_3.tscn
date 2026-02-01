@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://csi78kwfof0oj"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_lk5cp"]
+[ext_resource type="Texture2D" uid="uid://cahvaw3f7vp6k" path="res://Resources/Hub/Images/hub_portal_3.png" id="2_2ncn1"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="2_u0on1"]
+[ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="3_6f60e"]
+[ext_resource type="AudioStream" uid="uid://cyajupb5557bf" path="res://Resources/Sounds/tür.ogg" id="4_fgkiq"]
+
+[node name="maske_fragment_3" unique_id=1497449292 instance=ExtResource("1_lk5cp")]
+ID = "1"
+DisplayName = "maske_fragment_1"
+MusicStream = ExtResource("2_u0on1")
+
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
+texture = ExtResource("2_2ncn1")
+
+[node name="Altar" type="Polygon2D" parent="ClickAreas" parent_id_path=PackedInt32Array(987368998) index="0" unique_id=151782370]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(99, -56, 103, 83, 86, 95, 87, 125, 136, 140, 211, 150, 299, 154, 382, 153, 454, 148, 502, 134, 508, 106, 490, 89, 492, 75, 491, -58, 475, -74, 393, -85, 340, -120, 297, -121, 260, -88, 158, -82, 118, -75)
+script = ExtResource("3_6f60e")
+ID = "altar"
+TargetLocationID = "maske_fragment_3_detail"
+CursorID = "go"
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"
+
+[node name="ClickAreaSpawner" type="Polygon2D" parent="ClickAreas" parent_id_path=PackedInt32Array(987368998) index="1" unique_id=1307897933]
+position = Vector2(-353, -15)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-97, 44, -137, 39, -124, -74, -122, -352, -102, -413, -58, -468, -3, -487, 50, -471, 82, -436, 91, -384, 87, -69, 66, -53, 60, -5)
+script = ExtResource("3_6f60e")
+TargetLocationID = "chaosraum_geräte"
+SoundOnClick = ExtResource("4_fgkiq")
+CursorID = "go"
+PauseBeforeChange = 1.0
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"

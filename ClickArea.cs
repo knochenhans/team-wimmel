@@ -11,6 +11,7 @@ public partial class ClickArea : Area2D
     [Export] public string ActionID = "";
     [Export] public string TargetLocationID = "";
     [Export] public AudioStream SoundOnClick;
+    [Export] public string CursorID = "";
 
     [Export] public float FadeInDuration = 1.0f;
     [Export] public float FadeOutDuration = 1.0f;

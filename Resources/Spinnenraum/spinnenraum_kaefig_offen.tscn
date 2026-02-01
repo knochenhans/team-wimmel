@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://73doel3c6fow"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_tudba"]
+[ext_resource type="AudioStream" uid="uid://c3pkdacthr61v" path="res://Resources/Spinnenraum/Music/Spinnenraum Hintergrund.ogg" id="2_scvke"]
+[ext_resource type="AudioStream" uid="uid://hcpgenpudniy" path="res://Resources/Spinnenraum/Music/Spinnen brechen aus.ogg" id="3_scvke"]
+[ext_resource type="Texture2D" uid="uid://bwxllejsw8iiv" path="res://Resources/Spinnenraum/Images/spinnenraum_kaefig_offen.png" id="3_tudba"]
+
+[node name="spinnenraum_kaefig_offen" unique_id=1497449292 instance=ExtResource("1_tudba")]
+ID = "spinnenraum_kaefig_offen"
+MusicStream = ExtResource("2_scvke")
+StartSound = ExtResource("3_scvke")
+WaitDuration = 1.0
+NextLocationID = "spinnenraum_schwarz"
+
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
+texture = ExtResource("3_tudba")

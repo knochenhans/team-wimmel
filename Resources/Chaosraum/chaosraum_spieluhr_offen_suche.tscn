@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cn33y2w87ojfu"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_01ea3"]
+[ext_resource type="Texture2D" uid="uid://bqijev63fvamc" path="res://Resources/Chaosraum/Images/chaosraum_spieluhr_offen_suche.png" id="2_7hkut"]
+[ext_resource type="AudioStream" uid="uid://bgh1qc4jpabmg" path="res://Resources/Chaosraum/Music/Box_open.ogg" id="2_kuqh6"]
+[ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="3_abioy"]
+[ext_resource type="AudioStream" uid="uid://cgepghuultt4c" path="res://Resources/Hub/Music/maske_ablegen.ogg" id="5_abioy"]
+
+[node name="chaosraum_spieluhr_offen_suche" unique_id=1497449292 instance=ExtResource("1_01ea3")]
+ID = "1"
+DisplayName = "maske_fragment_1"
+StartSound = ExtResource("2_kuqh6")
+
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
+texture = ExtResource("2_7hkut")
+
+[node name="ClickAreaSpawner" type="Polygon2D" parent="ClickAreas" parent_id_path=PackedInt32Array(987368998) index="0" unique_id=1128308755]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-148, 7, -171, -64, -107, -68, -72, -70, -56, -29, -75, 26)
+script = ExtResource("3_abioy")
+TargetLocationID = "chaosraum_spieluhr_offen_leer"
+SoundOnClick = ExtResource("5_abioy")
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"

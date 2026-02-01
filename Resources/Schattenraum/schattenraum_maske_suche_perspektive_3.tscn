@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bs7eoiax8t7tk"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_ynp2c"]
+[ext_resource type="AudioStream" uid="uid://dnr6thpc3nrf6" path="res://Resources/Schattenraum/Music/Schattenraum Hintergrund.ogg" id="2_ay85i"]
+[ext_resource type="Texture2D" uid="uid://cda02utmj18uw" path="res://Resources/Schattenraum/Images/schattenraum_maske_suche_perspektive_3.png" id="3_ynp2c"]
+[ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="4_fqonx"]
+[ext_resource type="Script" uid="uid://ckbslb4rln2x3" path="res://Shadow.cs" id="5_iit50"]
+[ext_resource type="Script" uid="uid://gdsdtd32sye5" path="res://addons/RoundedPolygon2D/RoundedPolygon2D.gd" id="6_fqonx"]
+
+[sub_resource type="Animation" id="Animation_fqonx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RoundedPolygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(266, -583, 283, -517, -44, -464, -71, -322, -274, -335, -517, -438, -640, -259, -753, -366, -946, -221, -1154, -316, -1303, -505, 99, -621)]
+}
+
+[sub_resource type="Animation" id="Animation_iit50"]
+resource_name = "Schatten3"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RoundedPolygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3333334, 2.766667, 3.9333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [PackedVector2Array(775, -394, 400, -510, -3, -415, -80, -480, -284, -486, -457, -265, -569, -398, -742, -231, -843, -415, -1150, -409, -1302, -542, 831, -574), PackedVector2Array(919, -392, 385, -366, -1, -473, -95, -381, -273, -265, -427, -430, -573, -233, -674, -390, -873, -282, -1122, -469, -1302, -555, 824, -589), PackedVector2Array(878, -327.00003, 291.00003, -525, 23, -317.00003, -121, -308.00003, -307, -455.99997, -472, -293.00003, -603, -434.99997, -742, -274.00003, -873, -457.99997, -1167, -338, -1283, -561, 756.18964, -585.39655), PackedVector2Array(822, -465, 424, -368, 16, -445, -106, -488, -316, -296.99997, -483, -430, -612, -293, -764, -443.00003, -923, -293, -1169, -300, -1261, -578, 795.26965, -579.4431)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fqonx"]
+_data = {
+&"RESET": SubResource("Animation_fqonx"),
+&"Schatten3": SubResource("Animation_iit50")
+}
+
+[node name="schattenraum_maske_suche_perspektive_3" unique_id=1497449292 instance=ExtResource("1_ynp2c")]
+ID = "spinnenraum_maske_fragment_2_suche"
+MusicStream = ExtResource("2_ay85i")
+
+[node name="BackgroundSprite2D" parent="." index="0"]
+texture = ExtResource("3_ynp2c")
+
+[node name="ClickAreaSpawner" type="Polygon2D" parent="ClickAreas" index="0" unique_id=1287189549]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(846, 540, 955, 543, 955, 386, 688, 386)
+script = ExtResource("4_fqonx")
+TargetLocationID = "schattenraum_maske_suche_perspektive_4"
+CursorID = "go"
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"
+
+[node name="Shadow" type="Area2D" parent="." index="3" unique_id=298395247]
+position = Vector2(182, 539)
+script = ExtResource("5_iit50")
+
+[node name="RoundedPolygon2D" type="Polygon2D" parent="Shadow" index="0" unique_id=266252467]
+color = Color(0.12941177, 0.10980392, 0.12941177, 1)
+polygon = PackedVector2Array(266, -583, 283, -517, -44, -464, -71, -322, -274, -335, -517, -438, -640, -259, -753, -366, -946, -221, -1154, -316, -1303, -505, 99, -621)
+polygons = [null]
+script = ExtResource("6_fqonx")
+corner_radius = 300
+metadata/_custom_type_script = "uid://gdsdtd32sye5"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Shadow" index="1" unique_id=499794375]
+visible = false
+polygon = PackedVector2Array(80, -426, 686, -120, 759, 552, -1118, 493, -1018, -798)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4" unique_id=1292980752]
+root_node = NodePath("../Shadow")
+libraries/ = SubResource("AnimationLibrary_fqonx")
+autoplay = &"Schatten3"

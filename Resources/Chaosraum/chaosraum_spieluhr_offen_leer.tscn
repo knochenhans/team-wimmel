@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cln7a2hmrchjl"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_5fgb3"]
+[ext_resource type="Texture2D" uid="uid://db6bfwn6tblil" path="res://Resources/Chaosraum/Images/chaosraum_spieluhr_offen_leer.png" id="2_5fgb3"]
+
+[node name="chaosraum_spieluhr_offen_leer" unique_id=1497449292 instance=ExtResource("1_5fgb3")]
+ID = "1"
+DisplayName = "maske_fragment_1"
+WaitDuration = 1.0
+NextLocationID = "maske_fragment_4_detail"
+
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
+texture = ExtResource("2_5fgb3")

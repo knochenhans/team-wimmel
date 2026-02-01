@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dqsf4ri6hd7qg"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_jxmvu"]
+[ext_resource type="AudioStream" uid="uid://c3pkdacthr61v" path="res://Resources/Spinnenraum/Music/Spinnenraum Hintergrund.ogg" id="2_mmyir"]
+[ext_resource type="Texture2D" uid="uid://d3ywr54dsj4x6" path="res://Resources/Spinnenraum/Images/spinnenraum_schwarz.png" id="3_jxmvu"]
+
+[node name="spinnenraum_schwarz" unique_id=1497449292 instance=ExtResource("1_jxmvu")]
+ID = "spinnenraum_schwarz"
+MusicStream = ExtResource("2_mmyir")
+WaitDuration = 1.0
+NextLocationID = "spinnenraum_kaefig_offen_spinnen"
+
+[node name="BackgroundSprite2D" parent="." index="0"]
+texture = ExtResource("3_jxmvu")

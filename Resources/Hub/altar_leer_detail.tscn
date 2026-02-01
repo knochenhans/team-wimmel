@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cvrb5y54uht6u"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_psyj0"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="2_hnyc6"]
+[ext_resource type="Texture2D" uid="uid://dqq2p5buqkjmk" path="res://Resources/Hub/Images/altar_leer_detail.png" id="3_gv0br"]
+[ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="4_k7mxx"]
+
+[node name="altar_leer_detail" unique_id=1497449292 instance=ExtResource("1_psyj0")]
+ID = "1"
+MusicStream = ExtResource("2_hnyc6")
+
+[node name="BackgroundSprite2D" parent="." index="0"]
+texture = ExtResource("3_gv0br")
+
+[node name="Exit" type="Polygon2D" parent="ClickAreas" index="0" unique_id=1273232935]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(28, -244, -220, -168, -337, -36, -317, 257, -360, 368, -333, 494, -268, 543, -991, 555, -962, -546, 951, -538, 975, 547, 729, 539, 760, 418, 720, 305, 759, 75, 747, 32, 747, -20, 640, -153, 380, -242)
+script = ExtResource("4_k7mxx")
+ID = "maske_fragment_1"
+ActionID = "use"
+TargetLocationID = "maske_fragment_1_suche"
+CursorID = "go"
+metadata/_custom_type_script = "uid://b1v7q0j4vsufo"

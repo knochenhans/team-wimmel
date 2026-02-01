@@ -9,9 +9,10 @@ public partial class ClickAreaSpawner : Polygon2D
     [Export(PropertyHint.MultilineText)] public string Description = "";
 
     [ExportCategory("Action")]
-    [Export] public string ActionID = "look";
+    [Export] public string ActionID = "use";
     [Export] public string TargetLocationID = "";
     [Export] public AudioStream SoundOnClick;
+    [Export] public string CursorID = "";
 
     [ExportCategory("Transition")]
     [Export] public float FadeInDuration = 1.0f;
@@ -38,7 +39,8 @@ public partial class ClickAreaSpawner : Polygon2D
             Position = Position,
             RotationDegrees = RotationDegrees,
             Scale = Scale,
-            SoundOnClick = SoundOnClick
+            SoundOnClick = SoundOnClick,
+            CursorID = CursorID
         };
 
         var collisionPolygon = new CollisionPolygon2D

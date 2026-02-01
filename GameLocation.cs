@@ -11,6 +11,11 @@ public partial class GameLocation : Node
     [Export] public float FadeInDuration = 1.0f;
     [Export] public float FadeOutDuration = 1.0f;
     [Export] public AudioStream MusicStream;
+    [Export] public AudioStream StartSound;
+
+    [ExportCategory("Auto Transition")]
+    [Export] public float WaitDuration = 0.0f;
+    [Export] public string NextLocationID = "";
 
     [Signal] public delegate void ClickAreaClickedEventHandler(ClickArea clickArea);
     [Signal] public delegate void ClickAreaMouseEnteredEventHandler(ClickArea clickArea);
@@ -26,6 +31,14 @@ public partial class GameLocation : Node
     public VariableManager VariableManager;
     public CursorManager CursorManager;
     ClickArea CurrentHoverClickArea = null;
+
+    // public enum LocationStateEnum
+    // {
+    //     Active,
+    //     Inactive,
+    // }
+
+    // public LocationStateEnum LocationState = LocationStateEnum.Inactive;
     #endregion
 
     #region [Godot]
@@ -50,6 +63,32 @@ public partial class GameLocation : Node
         VariableManager.Increment($"scene.{ID}.visits");
         FadeInMusic();
     }
+
+    // public override async void _Process(double delta)
+    // {
+    //     base._Process(delta);
+
+    //     if (LocationState == LocationStateEnum.Active)
+    //     {
+    //         await Task.Delay((int)(WaitDuration * 1000));
+
+    //         EmitSignal(SignalName.LocationChanged, NextLocationID, FadeInDuration, FadeOutDuration);
+    //         LocationState = LocationStateEnum.Inactive;
+    //     }
+    // }
+
+    // public override void _Input(InputEvent @event)
+    // {
+    //     base._Input(@event);
+
+    //     if (string.IsNullOrEmpty(NextLocationID))
+    //         return;
+
+    //     if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed)
+    //     {
+    //         _ = ChangeLocation(NextLocationID, FadeInDuration, FadeOutDuration);
+    //     }
+    // }
     #endregion
 
     #region [Public]
@@ -73,9 +112,18 @@ public partial class GameLocation : Node
         Camera.Zoom = new Vector2(scale, scale);
     }
 
-    public void PlayMusic()
+    public virtual void PlayMusic() => EmitSignal(SignalName.PlayBackgroundMusic, MusicStream);
+
+    public async Task AutoTransitionToNextLocation()
     {
-        EmitSignal(SignalName.PlayBackgroundMusic, MusicStream);
+        GD.Print($"Auto transition in location {ID} to next location {NextLocationID} after {WaitDuration} seconds.");
+        if (WaitDuration > 0.0f && !string.IsNullOrEmpty(NextLocationID))
+        {
+            await Task.Delay((int)(WaitDuration * 1000));
+
+            await ChangeLocation(NextLocationID, FadeInDuration, FadeOutDuration);
+        }
+        GD.Print($"Auto transition in location {ID} to next location {NextLocationID} finished.");
     }
 
     public void FadeInMusic()
@@ -87,7 +135,7 @@ public partial class GameLocation : Node
     #endregion
 
     #region [Events]
-    public async void OnClickAreaClicked(ClickArea clickArea)
+    public virtual async void OnClickAreaClicked(ClickArea clickArea)
     {
         GD.Print($"Clicked on ClickArea: {clickArea.DisplayName} (ID: {clickArea.ID})");
 
@@ -102,7 +150,7 @@ public partial class GameLocation : Node
         await ChangeLocation(clickArea);
     }
 
-    private async Task ChangeLocation(ClickArea clickArea)
+    protected async Task ChangeLocation(ClickArea clickArea)
     {
         Vector2 targetPosition = Camera.GetGlobalMousePosition();
         var zoomTask = TweenZoomAtPoint(clickArea.ZoomDuration, targetPosition, Camera.Zoom.X * clickArea.ZoomAmount);
@@ -118,14 +166,19 @@ public partial class GameLocation : Node
         CursorManager.ResetMouseCursor();
     }
 
+    protected async Task ChangeLocation(string locationID, float fadeInDuration, float fadeOutDuration)
+    {
+        await SceneManager.Instance.FadeOut(fadeOutDuration);
+        EmitSignal(SignalName.LocationChanged, locationID, fadeInDuration, fadeOutDuration);
+    }
+
     public void OnClickMouseEntered(ClickArea clickArea)
     {
         GD.Print($"Mouse Entered ClickArea: {clickArea.DisplayName} (ID: {clickArea.ID})");
 
         if (CurrentHoverClickArea != clickArea && CurrentHoverClickArea != null)
-        {
             DeactivateClickArea(CurrentHoverClickArea);
-        }
+
         CurrentHoverClickArea = clickArea;
         ActivateClickArea(clickArea);
     }
@@ -148,7 +201,13 @@ public partial class GameLocation : Node
         EmitSignal(SignalName.ClickAreaMouseEntered, clickArea);
 
         UISoundPlayer.Instance.PlaySound("hover");
-        CursorManager.SetMouseCursor(clickArea.ActionID);
+
+        var cursorID = clickArea.ActionID;
+
+        if (!string.IsNullOrEmpty(clickArea.CursorID))
+            cursorID = clickArea.CursorID;
+
+        CursorManager.SetMouseCursor(cursorID);
     }
 
     private void DeactivateClickArea(ClickArea clickArea)

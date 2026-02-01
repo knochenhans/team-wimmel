@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://vkxirrc1tyi6"]
+
+[ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_oxbld"]
+[ext_resource type="Script" uid="uid://t6ukfdge37gh" path="res://Resources/Outro/Outro.cs" id="2_4iqxy"]
+[ext_resource type="Texture2D" uid="uid://blvp8qoa3gguk" path="res://Resources/Spinnenraum/Images/spinnenraum_maske_fragment_2_detail.png" id="3_cjvpd"]
+[ext_resource type="AudioStream" uid="uid://bxwkcae1ua5we" path="res://Resources/Outro/Outro_Music.ogg" id="3_ua0cm"]
+[ext_resource type="Texture2D" uid="uid://to2d6rsss65" path="res://Resources/Outro/Images/Font_Outtro.png" id="4_4iqxy"]
+
+[node name="outro" unique_id=1497449292 instance=ExtResource("1_oxbld")]
+script = ExtResource("2_4iqxy")
+MusicStream = ExtResource("3_ua0cm")
+
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
+visible = false
+texture = ExtResource("3_cjvpd")
+
+[node name="FontOuttro" type="Sprite2D" parent="." index="3" unique_id=1307970078]
+position = Vector2(3, 1)
+texture = ExtResource("4_4iqxy")

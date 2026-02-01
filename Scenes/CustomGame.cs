@@ -73,7 +73,17 @@ public partial class CustomGame : BaseGame
                 fadeInDuration = currentLocation.FadeInDuration;
 
             await SceneManager.Instance.FadeIn(fadeInDuration);
+
+            GD.Print($"Fade finished to location '{locationID}'.");
+
             GameState = CustomGameState.Active;
+
+            if (locationInstance is GameLocation gameLocation)
+            {
+                if (gameLocation.StartSound != null)
+                    OnPlaySound(gameLocation.StartSound);
+                await gameLocation.AutoTransitionToNextLocation();
+            }
         }
         else
         {
@@ -113,7 +123,7 @@ public partial class CustomGame : BaseGame
     public void OnPlayMusic(AudioStream audioStream)
     {
         if (audioStream == null)
-            return;
+            UISoundPlayer.Instance.StopMusic();
 
         UISoundPlayer.Instance.StartOrKeepMusic(audioStream);
     }

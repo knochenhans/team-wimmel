@@ -1,28 +1,95 @@
 [gd_scene format=3 uid="uid://b46xhre03dhm8"]
 
 [ext_resource type="Script" uid="uid://y3mca5ug3oee" path="res://Scenes/CustomGame.cs" id="2_7cnhq"]
-[ext_resource type="PackedScene" uid="uid://7101rmcld8pv" path="res://Scenes/maske_fragment_1_suche.tscn" id="2_v0k87"]
+[ext_resource type="PackedScene" uid="uid://7101rmcld8pv" path="res://Resources/Hub/maske_fragment_1_suche.tscn" id="2_v0k87"]
 [ext_resource type="PackedScene" uid="uid://3dyfxoyhxipj" path="res://addons/SceneManager/Widgets/OptionsWidget.tscn" id="3_7cnhq"]
-[ext_resource type="PackedScene" uid="uid://ck7nsxth0iha" path="res://Scenes/hub_leer.tscn" id="3_dn8ah"]
+[ext_resource type="PackedScene" uid="uid://ck7nsxth0iha" path="res://Resources/Hub/hub_leer.tscn" id="3_dn8ah"]
 [ext_resource type="PackedScene" uid="uid://ckeidvpi72g3b" path="res://addons/NotificationsManager/NotificationManager.tscn" id="3_rl2g2"]
 [ext_resource type="PackedScene" uid="uid://ddfbn05780mqq" path="res://addons/SceneManager/Nodes/HUD.tscn" id="4_v0k87"]
-[ext_resource type="PackedScene" uid="uid://cpmnyo1gn2vng" path="res://Scenes/maske_fragment_1.tscn" id="4_xvymb"]
-[ext_resource type="PackedScene" uid="uid://cf2es5nquhfvg" path="res://Scenes/maske_fragment_1_detail.tscn" id="5_n7jbs"]
-[ext_resource type="PackedScene" uid="uid://cvrb5y54uht6u" path="res://Scenes/altar_leer_detail.tscn" id="6_asmga"]
+[ext_resource type="PackedScene" uid="uid://cpmnyo1gn2vng" path="res://Resources/Hub/maske_fragment_1.tscn" id="4_xvymb"]
+[ext_resource type="PackedScene" uid="uid://cf2es5nquhfvg" path="res://Resources/Hub/maske_fragment_1_detail.tscn" id="5_n7jbs"]
+[ext_resource type="PackedScene" uid="uid://cvrb5y54uht6u" path="res://Resources/Hub/altar_leer_detail.tscn" id="6_asmga"]
 [ext_resource type="PackedScene" uid="uid://bjitbp7jtrsem" path="res://addons/ToolTipManager/TooltipManager.tscn" id="6_jlq67"]
 [ext_resource type="PackedScene" uid="uid://csatjfkt4ln35" path="res://CustomTooltip.tscn" id="7_dn8ah"]
-[ext_resource type="PackedScene" uid="uid://df2sptyop2gcf" path="res://Scenes/spinnenraum.tscn" id="7_qlf4v"]
+[ext_resource type="PackedScene" uid="uid://6rf04e7g68qx" path="res://Resources/Hub/maske_fragment_2.tscn" id="7_jxry6"]
+[ext_resource type="PackedScene" uid="uid://cq1se3u0vsdew" path="res://Resources/Hub/maske_outro_1.tscn" id="7_pepjj"]
+[ext_resource type="PackedScene" uid="uid://df2sptyop2gcf" path="res://Resources/Spinnenraum/spinnenraum_suche_schluessel.tscn" id="7_qlf4v"]
+[ext_resource type="PackedScene" uid="uid://cukgjxf7e4vly" path="res://Resources/Spinnenraum/spinnenraum_suche_detail.tscn" id="8_87coe"]
+[ext_resource type="PackedScene" uid="uid://0wyeb7kcd6cl" path="res://Resources/Hub/maske_outro_2.tscn" id="8_iuad8"]
+[ext_resource type="PackedScene" uid="uid://csi78kwfof0oj" path="res://Resources/Hub/maske_fragment_3.tscn" id="8_xnyef"]
+[ext_resource type="PackedScene" uid="uid://dstak3rdsa1ar" path="res://Resources/Hub/maske_outro_3.tscn" id="9_bcqxp"]
+[ext_resource type="PackedScene" uid="uid://c7rcm37f7oqsq" path="res://Resources/Spinnenraum/spinnenraum_schluessel_1.tscn" id="9_hx47l"]
 [ext_resource type="PackedScene" uid="uid://cby23l4t3id0f" path="res://TextOutput.tscn" id="9_xvymb"]
+[ext_resource type="PackedScene" uid="uid://c55a2b6tux0fs" path="res://Resources/Spinnenraum/spinnenraum_schluessel_2.tscn" id="10_25y4e"]
+[ext_resource type="PackedScene" uid="uid://dbenpyvceaqfn" path="res://Resources/Hub/maske_outro_4.tscn" id="10_f287t"]
+[ext_resource type="PackedScene" uid="uid://cncyyre45hi4n" path="res://Resources/Hub/maske_outro_5.tscn" id="11_22r0n"]
+[ext_resource type="PackedScene" uid="uid://cvdbkt3nradbt" path="res://Resources/Spinnenraum/spinnenraum_schluessel_2_detail.tscn" id="11_hx47l"]
+[ext_resource type="PackedScene" uid="uid://bgkhxodpjc75x" path="res://Resources/Spinnenraum/spinnenraum_schluessel_2_detail_2.tscn" id="12_25y4e"]
+[ext_resource type="PackedScene" uid="uid://73doel3c6fow" path="res://Resources/Spinnenraum/spinnenraum_kaefig_offen.tscn" id="18_bcqxp"]
+[ext_resource type="PackedScene" uid="uid://dqsf4ri6hd7qg" path="res://Resources/Spinnenraum/spinnenraum_schwarz.tscn" id="19_f287t"]
+[ext_resource type="PackedScene" uid="uid://bv3qnfu3nmtg2" path="res://Resources/Spinnenraum/spinnenraum_kaefig_offen_spinnen.tscn" id="20_22r0n"]
+[ext_resource type="PackedScene" uid="uid://bo155peulorsk" path="res://Resources/Spinnenraum/spinnenraum_maske_fragment_2_suche.tscn" id="21_1jem7"]
+[ext_resource type="PackedScene" uid="uid://blkecvwvwi8j2" path="res://Resources/Spinnenraum/spinnenraum_maske_fragment_2_detail.tscn" id="22_1jem7"]
+[ext_resource type="PackedScene" uid="uid://cheba0hc5nsk" path="res://Resources/Spinnenraum/spinnenraum_kafig_leer_detail.tscn" id="23_6vpgj"]
+[ext_resource type="PackedScene" uid="uid://d1sdr2us4uv62" path="res://Resources/Hub/maske_fragment_2_detail.tscn" id="24_l8d6x"]
+[ext_resource type="PackedScene" uid="uid://5spkcikhi53c" path="res://Resources/Hub/maske_fragment_3_detail.tscn" id="25_mo2pf"]
+[ext_resource type="PackedScene" uid="uid://chnwd7nxuf1fk" path="res://Resources/Hub/maske_fragment_4_detail.tscn" id="26_jxry6"]
+[ext_resource type="PackedScene" uid="uid://uvxcklpxiuyt" path="res://Resources/Schattenraum/schattenraum_maske_suche_perspektive_1.tscn" id="28_hagt7"]
+[ext_resource type="PackedScene" uid="uid://bhif086kyakf4" path="res://Resources/Schattenraum/schattenraum_maske_suche_perspektive_2.tscn" id="29_tsmwa"]
+[ext_resource type="PackedScene" uid="uid://bs7eoiax8t7tk" path="res://Resources/Schattenraum/schattenraum_maske_suche_perspektive_3.tscn" id="30_ahgec"]
+[ext_resource type="PackedScene" uid="uid://ckj6bg137a8b" path="res://Resources/Schattenraum/schattenraum_maske_suche_perspektive_4.tscn" id="31_cc7pn"]
+[ext_resource type="PackedScene" uid="uid://ct703lxp4siya" path="res://Resources/Schattenraum/schattenraum_maske_suche_perspektive_5.tscn" id="32_xnyef"]
+[ext_resource type="PackedScene" uid="uid://c4lftfsvm3bu0" path="res://Resources/Chaosraum/chaosraum_geräte.tscn" id="33_cc7pn"]
+[ext_resource type="PackedScene" uid="uid://cn33y2w87ojfu" path="res://Resources/Chaosraum/chaosraum_spieluhr_offen_suche.tscn" id="34_xnyef"]
+[ext_resource type="PackedScene" uid="uid://cln7a2hmrchjl" path="res://Resources/Chaosraum/chaosraum_spieluhr_offen_leer.tscn" id="35_y65c7"]
+[ext_resource type="PackedScene" uid="uid://vkxirrc1tyi6" path="res://Resources/Outro/Outro.tscn" id="37_y65c7"]
 
 [node name="GameScene" type="Node" unique_id=872207046 node_paths=PackedStringArray("Camera")]
 script = ExtResource("2_7cnhq")
 Locations = Dictionary[String, PackedScene]({
+"altar_leer": null,
 "altar_leer_detail": ExtResource("6_asmga"),
+"chaosraum_geräte": ExtResource("33_cc7pn"),
+"chaosraum_spieluhr_offen_leer": ExtResource("35_y65c7"),
+"chaosraum_spieluhr_offen_suche": ExtResource("34_xnyef"),
 "hub_leer": ExtResource("3_dn8ah"),
+"hub_portal_1": null,
+"hub_portal_2": null,
 "maske_fragment_1": ExtResource("4_xvymb"),
 "maske_fragment_1_detail": ExtResource("5_n7jbs"),
+"maske_fragment_1_detail_1": null,
+"maske_fragment_1_detail_2": null,
 "maske_fragment_1_suche": ExtResource("2_v0k87"),
-"spinnenraum": ExtResource("7_qlf4v")
+"maske_fragment_2": ExtResource("7_jxry6"),
+"maske_fragment_2_detail": ExtResource("24_l8d6x"),
+"maske_fragment_3": ExtResource("8_xnyef"),
+"maske_fragment_3_detail": ExtResource("25_mo2pf"),
+"maske_fragment_4": null,
+"maske_fragment_4_detail": ExtResource("26_jxry6"),
+"maske_outro_1": ExtResource("7_pepjj"),
+"maske_outro_2": ExtResource("8_iuad8"),
+"maske_outro_3": ExtResource("9_bcqxp"),
+"maske_outro_4": ExtResource("10_f287t"),
+"maske_outro_5": ExtResource("11_22r0n"),
+"outro": ExtResource("37_y65c7"),
+"schattenraum_maske_suche_perspektive_1": ExtResource("28_hagt7"),
+"schattenraum_maske_suche_perspektive_2": ExtResource("29_tsmwa"),
+"schattenraum_maske_suche_perspektive_3": ExtResource("30_ahgec"),
+"schattenraum_maske_suche_perspektive_4": ExtResource("31_cc7pn"),
+"schattenraum_maske_suche_perspektive_5": ExtResource("32_xnyef"),
+"spinnenraum": ExtResource("7_qlf4v"),
+"spinnenraum_kaefig_offen": ExtResource("18_bcqxp"),
+"spinnenraum_kaefig_offen_spinnen": ExtResource("20_22r0n"),
+"spinnenraum_kafig_leer_detail": ExtResource("23_6vpgj"),
+"spinnenraum_maske_fragment_2_detail": ExtResource("22_1jem7"),
+"spinnenraum_maske_fragment_2_suche": ExtResource("21_1jem7"),
+"spinnenraum_schluessel_1": ExtResource("9_hx47l"),
+"spinnenraum_schluessel_2": ExtResource("10_25y4e"),
+"spinnenraum_schluessel_2_detail": ExtResource("11_hx47l"),
+"spinnenraum_schluessel_2_detail_2": ExtResource("12_25y4e"),
+"spinnenraum_schwarz": ExtResource("19_f287t"),
+"spinnenraum_suche_detail": ExtResource("8_87coe"),
+"spinnenraum_suche_schluessel": ExtResource("7_qlf4v")
 })
 StartingLocationID = "maske_fragment_1_suche"
 Camera = NodePath("Camera2D")
