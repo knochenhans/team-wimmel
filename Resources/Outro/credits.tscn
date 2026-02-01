@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_weddq"]
 [ext_resource type="Script" uid="uid://bui0o4yt7wpsc" path="res://Resources/Outro/Credits.cs" id="2_hiken"]
+[ext_resource type="Texture2D" uid="uid://d0km25x3wcv2k" path="res://Resources/Outro/Images/Credits.png" id="4_hiken"]
 [ext_resource type="Texture2D" uid="uid://blvp8qoa3gguk" path="res://Resources/Spinnenraum/Images/spinnenraum_maske_fragment_2_detail.png" id="4_ipc7v"]
-[ext_resource type="Texture2D" uid="uid://to2d6rsss65" path="res://Resources/Outro/Images/Font_Outtro.png" id="5_gb8ri"]
 
 [node name="credits" unique_id=1497449292 instance=ExtResource("1_weddq")]
 script = ExtResource("2_hiken")
@@ -14,4 +14,4 @@ texture = ExtResource("4_ipc7v")
 
 [node name="FontOuttro" type="Sprite2D" parent="." index="3" unique_id=1307970078]
 position = Vector2(3, 1)
-texture = ExtResource("5_gb8ri")
+texture = ExtResource("4_hiken")
