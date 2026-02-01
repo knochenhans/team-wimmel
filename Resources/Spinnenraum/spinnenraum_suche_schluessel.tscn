@@ -10,26 +10,26 @@
 ID = "spinnenraum_suche_schluessel"
 MusicStream = ExtResource("2_8bhxc")
 
-[node name="BackgroundSprite2D" parent="." index="0"]
+[node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
 texture = ExtResource("3_wxrrx")
 
-[node name="Mauseloch" type="Polygon2D" parent="ClickAreas" index="0" unique_id=444885557]
+[node name="Mauseloch" type="Polygon2D" parent="ClickAreas" parent_id_path=PackedInt32Array(987368998) index="0" unique_id=444885557]
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(712, 13, 714, -36, 738, -47, 771, -38, 786, -18, 781, 31)
 script = ExtResource("4_t56ie")
 TargetLocationID = "spinnenraum_schluessel_1"
 metadata/_custom_type_script = "uid://b1v7q0j4vsufo"
 
-[node name="Exit" type="Polygon2D" parent="ClickAreas" index="1" unique_id=151970609]
+[node name="Exit" type="Polygon2D" parent="ClickAreas" parent_id_path=PackedInt32Array(987368998) index="1" unique_id=151970609]
 color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(-736, -554, -513, 97, -324, 582, -1008, 588, -1024, -634)
+polygon = PackedVector2Array(-736, -554, -549, -243, -588, 102, -713, 228, -366, 303, -324, 582, -1008, 588, -1024, -634)
 script = ExtResource("4_t56ie")
 TargetLocationID = "maske_fragment_1"
 SoundOnClick = ExtResource("5_xaxhi")
 CursorID = "go"
 metadata/_custom_type_script = "uid://b1v7q0j4vsufo"
 
-[node name="ClickAreaSpawner" type="Polygon2D" parent="ClickAreas" index="2" unique_id=893403117]
+[node name="ClickAreaSpawner" type="Polygon2D" parent="ClickAreas" parent_id_path=PackedInt32Array(987368998) index="2" unique_id=893403117]
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(136, -152, 136, 238, 224, 280, 384, 282, 386, 285, 462, 266, 466, -177, 419, -260, 306, -293, 217, -272, 143, -229)
 script = ExtResource("4_t56ie")

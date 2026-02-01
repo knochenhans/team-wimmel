@@ -18,6 +18,7 @@ Loops = Dictionary[String, AudioStream]({
 "3": ExtResource("5_ct42t"),
 "4": ExtResource("6_16q44")
 })
+FadeOutDuration = 2.0
 
 [node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
 texture = ExtResource("2_mjvad")

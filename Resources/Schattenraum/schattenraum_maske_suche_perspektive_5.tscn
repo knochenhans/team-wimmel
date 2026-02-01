@@ -48,6 +48,7 @@ _data = {
 
 [node name="schattenraum_maske_suche_perspektive_5" unique_id=1497449292 instance=ExtResource("1_8mrbq")]
 ID = "spinnenraum_maske_fragment_2_suche"
+FadeOutDuration = 2.0
 MusicStream = ExtResource("2_rykah")
 
 [node name="BackgroundSprite2D" parent="." index="0" unique_id=1575261564]
