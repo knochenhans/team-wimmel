@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bdndsqe7p05gt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jjpn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_baefi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jjpn"]
+bg_color = Color(0, 1, 0, 1)
+
+[resource]
+MarginContainer/constants/margin_bottom = 5
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_8jjpn")
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_baefi")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_8jjpn")
+VBoxContainer/constants/separation = 0

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8jnhacebtvma"]
+
+[ext_resource type="Script" uid="uid://vy24qwecaove" path="res://addons/SelectionManager/Background.cs" id="1_t4dpp"]
+[ext_resource type="Script" uid="uid://7rey5tedptav" path="res://addons/SelectionManager/SelectionManager.cs" id="1_ugyw0"]
+[ext_resource type="PackedScene" uid="uid://vaihq65quiht" path="res://addons/SelectionManager/CursorRect.tscn" id="2_m4oq5"]
+[ext_resource type="PackedScene" uid="uid://e5afv5a6qcw4" path="res://addons/SelectionManager/SelectionRect.tscn" id="3_33bk5"]
+
+[node name="SelectionManager" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_ugyw0")
+cursorScene = ExtResource("2_m4oq5")
+selectionScene = ExtResource("3_33bk5")
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -500.0
+offset_right = 348.0
+offset_bottom = 852.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_t4dpp")

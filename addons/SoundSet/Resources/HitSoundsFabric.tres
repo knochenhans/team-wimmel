@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="SoundSetResource" format=3 uid="uid://vfp5dayfh1e6"]
+
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="1_4rlpd"]
+[ext_resource type="AudioStream" uid="uid://dluv8gnufo4p7" path="res://addons/SoundSet/Resources/Sounds/Hits/fabric1.ogg" id="1_nan82"]
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="2_c0l8y"]
+[ext_resource type="AudioStream" uid="uid://dunu278ljlrn2" path="res://addons/SoundSet/Resources/Sounds/Hits/fabric2.ogg" id="3_3ww05"]
+[ext_resource type="AudioStream" uid="uid://bt55nln68tlb5" path="res://addons/SoundSet/Resources/Sounds/Hits/fabric3.ogg" id="4_7lcn4"]
+[ext_resource type="AudioStream" uid="uid://ctdmfbxreim5b" path="res://addons/SoundSet/Resources/Sounds/Hits/fabric4.ogg" id="5_j2vr1"]
+
+[sub_resource type="Resource" id="Resource_x3wqt"]
+script = ExtResource("2_c0l8y")
+AudioStream = ExtResource("1_nan82")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_p8k60"]
+script = ExtResource("2_c0l8y")
+AudioStream = ExtResource("3_3ww05")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_th7ai"]
+script = ExtResource("2_c0l8y")
+AudioStream = ExtResource("4_7lcn4")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_cptc5"]
+script = ExtResource("2_c0l8y")
+AudioStream = ExtResource("5_j2vr1")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[resource]
+script = ExtResource("1_4rlpd")
+ID = "fabric"
+SoundSet = [SubResource("Resource_x3wqt"), SubResource("Resource_p8k60"), SubResource("Resource_th7ai"), SubResource("Resource_cptc5")]
+metadata/_custom_type_script = "uid://chiidjpp5n41d"

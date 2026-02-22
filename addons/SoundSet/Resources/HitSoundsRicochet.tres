@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="SoundSetResource" format=3 uid="uid://dfi1s12ydker7"]
+
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="1_sqmm0"]
+[ext_resource type="AudioStream" uid="uid://cisl16rpqhx04" path="res://addons/SoundSet/Resources/Sounds/Hits/ricochet1.ogg" id="2_70kuv"]
+[ext_resource type="AudioStream" uid="uid://dopqhyx6b6xuc" path="res://addons/SoundSet/Resources/Sounds/Hits/ricochet2.ogg" id="3_iox80"]
+[ext_resource type="AudioStream" uid="uid://dis4gtjj5nebr" path="res://addons/SoundSet/Resources/Sounds/Hits/ricochet3.ogg" id="4_8i8d1"]
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="5_5nxak"]
+
+[sub_resource type="Resource" id="Resource_mr6cg"]
+script = ExtResource("1_sqmm0")
+AudioStream = ExtResource("2_70kuv")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_dpocg"]
+script = ExtResource("1_sqmm0")
+AudioStream = ExtResource("3_iox80")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_lrmie"]
+script = ExtResource("1_sqmm0")
+AudioStream = ExtResource("4_8i8d1")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[resource]
+script = ExtResource("5_5nxak")
+ID = "ricochet"
+SoundSet = Array[ExtResource("1_sqmm0")]([SubResource("Resource_mr6cg"), SubResource("Resource_dpocg"), SubResource("Resource_lrmie")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"

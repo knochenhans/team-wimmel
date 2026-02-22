@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SoundSetResource" format=3 uid="uid://b3xfar5d8vp4"]
+
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="1_0a8f0"]
+[ext_resource type="AudioStream" uid="uid://cqv7pyuxkfqsr" path="res://addons/SoundSet/Resources/Sounds/Steps/grass_01.ogg" id="2_14p1c"]
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="3_5mtdp"]
+
+[sub_resource type="Resource" id="Resource_kjvhd"]
+script = ExtResource("1_0a8f0")
+AudioStream = ExtResource("2_14p1c")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[resource]
+script = ExtResource("3_5mtdp")
+ID = "grass"
+SoundSet = [SubResource("Resource_kjvhd")]
+metadata/_custom_type_script = "uid://chiidjpp5n41d"

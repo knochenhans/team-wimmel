@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjitbp7jtrsem"]
+
+[ext_resource type="Script" uid="uid://dw4mw5615wi2" path="res://addons/ToolTipManager/TooltipManager.cs" id="1_vumx5"]
+[ext_resource type="PackedScene" uid="uid://8igotbil50rb" path="res://addons/ToolTipManager/Tooltip.tscn" id="2_nyhyl"]
+
+[node name="TooltipManager" type="Node" node_paths=PackedStringArray("TooltipParentNode")]
+script = ExtResource("1_vumx5")
+TooltipScene = ExtResource("2_nyhyl")
+TooltipParentNode = NodePath(".")
+TooltipOffset = Vector2(0, 10)

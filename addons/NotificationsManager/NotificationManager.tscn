@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckeidvpi72g3b"]
+
+[ext_resource type="Script" uid="uid://b316j6tjbdm03" path="res://addons/NotificationsManager/NotificationManager.cs" id="1_i7foh"]
+[ext_resource type="PackedScene" uid="uid://dmdalullyvcyt" path="res://addons/NotificationsManager/NotificationLabel.tscn" id="2_v2atf"]
+
+[node name="NotificationManager" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_i7foh")
+NotificationScene = ExtResource("2_v2atf")
+
+[node name="NotificationContainer" type="Control" parent="."]
+layout_mode = 2
+mouse_filter = 2

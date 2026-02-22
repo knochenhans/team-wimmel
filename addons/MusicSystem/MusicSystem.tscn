@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf5rq31ffga31"]
+
+[ext_resource type="Script" uid="uid://le7ue2w3rulo" path="res://addons/MusicSystem/MusicSystem.cs" id="1_xckaf"]
+
+[node name="MusicSystem" type="AudioStreamPlayer"]
+autoplay = true
+bus = &"Music"
+script = ExtResource("1_xckaf")

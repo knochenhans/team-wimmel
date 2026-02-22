@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b4hulv2gjask8"]
+
+[ext_resource type="PackedScene" uid="uid://e3yjqqcvdjy" path="res://addons/SceneManager/Scenes/CentralLayoutScene.tscn" id="1_0edhc"]
+[ext_resource type="Texture2D" uid="uid://bjxujors8fxe7" path="res://Resources/Intro/Images/VIER_Title_ver2.png" id="2_tmaro"]
+[ext_resource type="AudioStream" uid="uid://p2xagf8bqm8d" path="res://Resources/Hub/Music/Hub_Hintergrund.ogg" id="2_yv27f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0edhc"]
+font_size = 100
+
+[node name="IntroScene" unique_id=1954271270 instance=ExtResource("1_0edhc")]
+DefaultNextScene = "game"
+PlayUIMusic = true
+FadeInTime = 3.0
+FadeOutTime = 1.0
+
+[node name="VierTitleVer2" type="Sprite2D" parent="SceneBackground/MarginContainer/CenterContainer/PanelContainer/MarginContainer/Buttons" index="0" unique_id=986948704]
+scale = Vector2(0.7016171, 0.7016171)
+texture = ExtResource("2_tmaro")
+
+[node name="Label" type="Label" parent="SceneBackground/MarginContainer/CenterContainer/PanelContainer/MarginContainer/Buttons" index="1" unique_id=1254777121]
+visible = false
+layout_mode = 2
+text = "VIER"
+label_settings = SubResource("LabelSettings_0edhc")
+
+[node name="HBoxContainer" parent="SceneBackground/MarginContainer" index="1"]
+visible = false
+
+[node name="MusicPlayer" parent="." index="2"]
+stream = ExtResource("2_yv27f")
+autoplay = true
+bus = &"Music"

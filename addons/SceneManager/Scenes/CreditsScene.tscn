@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dm6frlk3i0bo8"]
+
+[ext_resource type="PackedScene" uid="uid://e3yjqqcvdjy" path="res://addons/SceneManager/Scenes/CentralLayoutScene.tscn" id="1_6a2qp"]
+
+[node name="CreditsScene" unique_id=472857776 instance=ExtResource("1_6a2qp")]
+
+[node name="HBoxContainer" parent="SceneBackground/MarginContainer" index="1"]
+visible = false

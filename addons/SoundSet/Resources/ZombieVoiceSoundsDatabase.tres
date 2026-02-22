@@ -1,0 +1,125 @@
+[gd_resource type="Resource" script_class="SoundDatabaseResource" load_steps=37 format=3 uid="uid://cyedy6gkqgtgp"]
+
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="1_lkww4"]
+[ext_resource type="Script" uid="uid://k25dvp51kkgl" path="res://addons/SoundSet/SoundDatabaseResource.cs" id="2_s1inr"]
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="2_uxhq3"]
+[ext_resource type="AudioStream" uid="uid://b6p74qhdb0nv4" path="res://Resources/Sounds/Zombie/voice-003.wav" id="3_um5oq"]
+[ext_resource type="AudioStream" uid="uid://72v50uaf3bas" path="res://Resources/Sounds/Zombie/voice-005.wav" id="4_b6exg"]
+[ext_resource type="AudioStream" uid="uid://bv37xhovfmc0p" path="res://Resources/Sounds/Zombie/voice-006.wav" id="5_hwxut"]
+[ext_resource type="AudioStream" uid="uid://df01wje6pcunj" path="res://Resources/Sounds/Zombie/voice-007.wav" id="6_oaf7a"]
+[ext_resource type="AudioStream" uid="uid://rvl3k3dh10p3" path="res://Resources/Sounds/Zombie/voice-001.wav" id="7_0p3fv"]
+[ext_resource type="AudioStream" uid="uid://cykjhjdxv1vj" path="res://Resources/Sounds/Zombie/voice-002.wav" id="8_mhnnp"]
+[ext_resource type="AudioStream" uid="uid://cxo5tebgvi6r7" path="res://Resources/Sounds/Zombie/hurt-003.wav" id="9_aregp"]
+[ext_resource type="AudioStream" uid="uid://uu5o6qcunm62" path="res://Resources/Sounds/Zombie/hurt-002.wav" id="10_jxuu4"]
+[ext_resource type="AudioStream" uid="uid://brkqng06dg51f" path="res://Resources/Sounds/Zombie/hurt-001.wav" id="11_r3vfy"]
+[ext_resource type="AudioStream" uid="uid://o6te7643vk78" path="res://addons/SoundSet/Resources/Sounds/Hits/hurt-004.ogg" id="12_t4nn6"]
+[ext_resource type="AudioStream" uid="uid://cdnrkh8lrm1ig" path="res://Resources/Sounds/Zombie/death-001.wav" id="13_5yfyp"]
+[ext_resource type="AudioStream" uid="uid://db2s0g6vgw6dg" path="res://Resources/Sounds/Zombie/death-002.wav" id="14_mi6wm"]
+[ext_resource type="AudioStream" uid="uid://dhf74q8e8kujg" path="res://Resources/Sounds/Zombie/noticed.ogg" id="15_b6exg"]
+[ext_resource type="AudioStream" uid="uid://b28obobd7shpm" path="res://Resources/Sounds/Zombie/forgot.ogg" id="16_hwxut"]
+
+[sub_resource type="Resource" id="Resource_6la72"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("3_um5oq")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_qnuxy"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("4_b6exg")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_m2gs5"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("5_hwxut")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_neknm"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("6_oaf7a")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_j332f"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("7_0p3fv")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_6wptb"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("8_mhnnp")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_jpn0c"]
+script = ExtResource("1_lkww4")
+ID = "idle"
+SoundSet = Array[ExtResource("2_uxhq3")]([SubResource("Resource_6la72"), SubResource("Resource_qnuxy"), SubResource("Resource_m2gs5"), SubResource("Resource_neknm"), SubResource("Resource_j332f"), SubResource("Resource_6wptb")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"
+
+[sub_resource type="Resource" id="Resource_qsfks"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("9_aregp")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_t7i3s"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("10_jxuu4")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_ulgko"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("11_r3vfy")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_tbxdj"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("12_t4nn6")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_qbarh"]
+script = ExtResource("1_lkww4")
+ID = "hit"
+SoundSet = Array[ExtResource("2_uxhq3")]([SubResource("Resource_qsfks"), SubResource("Resource_t7i3s"), SubResource("Resource_ulgko"), SubResource("Resource_tbxdj")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"
+
+[sub_resource type="Resource" id="Resource_vqn2w"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("13_5yfyp")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_r7him"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("14_mi6wm")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_4em1r"]
+script = ExtResource("1_lkww4")
+ID = "death"
+SoundSet = Array[ExtResource("2_uxhq3")]([SubResource("Resource_vqn2w"), SubResource("Resource_r7him")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"
+
+[sub_resource type="Resource" id="Resource_b6exg"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("15_b6exg")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_hwxut"]
+script = ExtResource("1_lkww4")
+ID = "noticed"
+SoundSet = Array[ExtResource("2_uxhq3")]([SubResource("Resource_b6exg")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"
+
+[sub_resource type="Resource" id="Resource_oaf7a"]
+script = ExtResource("2_uxhq3")
+AudioStream = ExtResource("16_hwxut")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_0p3fv"]
+script = ExtResource("1_lkww4")
+ID = "forgot"
+SoundSet = Array[ExtResource("2_uxhq3")]([SubResource("Resource_oaf7a")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"
+
+[resource]
+script = ExtResource("2_s1inr")
+ID = "voice"
+SoundSets = Array[ExtResource("1_lkww4")]([SubResource("Resource_jpn0c"), SubResource("Resource_qbarh"), SubResource("Resource_4em1r"), SubResource("Resource_hwxut"), SubResource("Resource_0p3fv")])
+metadata/_custom_type_script = "uid://k25dvp51kkgl"

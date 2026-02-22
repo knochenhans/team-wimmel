@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="SoundSetResource" format=3 uid="uid://801xg5aushwe"]
+
+[ext_resource type="AudioStream" uid="uid://ublbt8kyclkc" path="res://addons/SoundSet/Resources/Sounds/Steps/metal_grill1.ogg" id="1_d14s5"]
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="2_5eq1m"]
+[ext_resource type="AudioStream" uid="uid://dyictq3clgbav" path="res://addons/SoundSet/Resources/Sounds/Steps/metal_grill2.ogg" id="3_vjq16"]
+[ext_resource type="AudioStream" uid="uid://drv7ndd13kcs" path="res://addons/SoundSet/Resources/Sounds/Steps/metal_grill3.ogg" id="4_y4olj"]
+[ext_resource type="AudioStream" uid="uid://djiycf60m7t7g" path="res://addons/SoundSet/Resources/Sounds/Steps/metal_grill4.ogg" id="5_s4omm"]
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="6_730dv"]
+
+[sub_resource type="Resource" id="Resource_c4qx6"]
+script = ExtResource("2_5eq1m")
+AudioStream = ExtResource("1_d14s5")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_rr4rn"]
+script = ExtResource("2_5eq1m")
+AudioStream = ExtResource("3_vjq16")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_1syu4"]
+script = ExtResource("2_5eq1m")
+AudioStream = ExtResource("4_y4olj")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_tk7uu"]
+script = ExtResource("2_5eq1m")
+AudioStream = ExtResource("5_s4omm")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[resource]
+script = ExtResource("6_730dv")
+ID = "metal"
+SoundSet = Array[Object]([SubResource("Resource_c4qx6"), SubResource("Resource_rr4rn"), SubResource("Resource_1syu4"), SubResource("Resource_tk7uu")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"

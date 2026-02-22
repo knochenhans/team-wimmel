@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b0cbj0x4knt5w"]
+
+[ext_resource type="Script" uid="uid://ply4i6vsn2t2" path="res://addons/TimedAudioStreamPlayer/TimedAudioStreamPlayerResource.cs" id="1_67l72"]
+
+[resource]
+script = ExtResource("1_67l72")
+Randomize = true
+RandomVolumeAdded = 0.0
+RandomPitchAdded = 0.0
+BaseDelay = 0.0
+RandomDelayAdded = 0.0
+MaxDelay = 0.0
+MinDelay = 0.0

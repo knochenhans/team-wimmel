@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="SoundDatabaseResource" load_steps=10 format=3 uid="uid://dnhgn4oxeqsrb"]
+
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="1_7kdj8"]
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="2_ijgvg"]
+[ext_resource type="AudioStream" uid="uid://xurkqmero62e" path="res://addons/SoundSet/Resources/Sounds/Explosions/glass1.ogg" id="3_ax32g"]
+[ext_resource type="AudioStream" uid="uid://cm3axn0hfs0o4" path="res://addons/SoundSet/Resources/Sounds/Hits/hit.wav" id="4_ijgvg"]
+[ext_resource type="Script" uid="uid://k25dvp51kkgl" path="res://addons/SoundSet/SoundDatabaseResource.cs" id="4_y84pf"]
+
+[sub_resource type="Resource" id="Resource_5tuhn"]
+script = ExtResource("2_ijgvg")
+AudioStream = ExtResource("3_ax32g")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_2gh4u"]
+script = ExtResource("1_7kdj8")
+ID = "glass"
+SoundSet = Array[ExtResource("2_ijgvg")]([SubResource("Resource_5tuhn")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"
+
+[sub_resource type="Resource" id="Resource_ax32g"]
+script = ExtResource("2_ijgvg")
+AudioStream = ExtResource("4_ijgvg")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_y84pf"]
+script = ExtResource("1_7kdj8")
+ID = "general"
+SoundSet = Array[ExtResource("2_ijgvg")]([SubResource("Resource_ax32g")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"
+
+[resource]
+script = ExtResource("4_y84pf")
+ID = "explosions"
+SoundSets = Array[ExtResource("1_7kdj8")]([SubResource("Resource_2gh4u"), SubResource("Resource_y84pf")])

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SoundSetResource" format=3 uid="uid://gjip0ytqhvkk"]
+
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="1_2vwmd"]
+[ext_resource type="AudioStream" uid="uid://bjm5hnoempjjn" path="res://addons/SoundSet/Resources/Sounds/Hits/flesh1.ogg" id="2_qpj3l"]
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="3_ehe8a"]
+
+[sub_resource type="Resource" id="Resource_t3uud"]
+script = ExtResource("1_2vwmd")
+AudioStream = ExtResource("2_qpj3l")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[resource]
+script = ExtResource("3_ehe8a")
+ID = "flesh"
+SoundSet = Array[ExtResource("1_2vwmd")]([SubResource("Resource_t3uud")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"

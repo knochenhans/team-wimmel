@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://e5afv5a6qcw4"]
+
+[ext_resource type="Script" uid="uid://c8tfmtg17e5ib" path="res://addons/SelectionManager/SelectionRect.cs" id="1_f755q"]
+
+[node name="Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f755q")
+
+[node name="Rect" type="Line2D" parent="."]
+points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64, -64, -64)
+width = 1.0
+begin_cap_mode = 1

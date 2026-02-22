@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SoundSetResource" format=3 uid="uid://6exgwx700hvo"]
+
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="1_spspe"]
+[ext_resource type="AudioStream" uid="uid://b3ikph7p08pcb" path="res://addons/SoundSet/Resources/Sounds/Hits/glass1.ogg" id="2_gtmrt"]
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="3_iws5y"]
+
+[sub_resource type="Resource" id="Resource_tq0ep"]
+script = ExtResource("1_spspe")
+AudioStream = ExtResource("2_gtmrt")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[resource]
+script = ExtResource("3_iws5y")
+ID = "glass"
+SoundSet = Array[ExtResource("1_spspe")]([SubResource("Resource_tq0ep")])
+metadata/_custom_type_script = "uid://chiidjpp5n41d"

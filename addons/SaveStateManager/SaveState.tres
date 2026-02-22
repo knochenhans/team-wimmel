@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dt3jd5g0ra4w6"]
+
+[ext_resource type="Script" uid="uid://cb2nkglkn3owp" path="res://addons/SaveStateManager/SaveState.cs" id="1_tcox6"]
+
+[resource]
+script = ExtResource("1_tcox6")

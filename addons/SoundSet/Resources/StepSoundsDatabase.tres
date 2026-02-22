@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SoundDatabaseResource" load_steps=8 format=3 uid="uid://cgfckxqo5ypkf"]
+
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="1_ebqvw"]
+[ext_resource type="Resource" uid="uid://b3xfar5d8vp4" path="res://addons/SoundSet/Resources/Sounds/StepSoundsGrass.tres" id="2_10rn1"]
+[ext_resource type="Resource" uid="uid://72b85nql3who" path="res://addons/SoundSet/Resources/Sounds/StepSoundsSand.tres" id="3_4em71"]
+[ext_resource type="Resource" uid="uid://cbopxmd63aqua" path="res://addons/SoundSet/Resources/Sounds/StepSoundsStone.tres" id="4_4em71"]
+[ext_resource type="Resource" uid="uid://co0ounicve3o3" path="res://addons/SoundSet/Resources/Sounds/StepSoundsWood.tres" id="4_sqbtj"]
+[ext_resource type="Resource" uid="uid://801xg5aushwe" path="res://addons/SoundSet/Resources/Sounds/StepSoundsMetal.tres" id="5_10rn1"]
+[ext_resource type="Script" uid="uid://k25dvp51kkgl" path="res://addons/SoundSet/SoundDatabaseResource.cs" id="5_whjom"]
+
+[resource]
+script = ExtResource("5_whjom")
+ID = "steps"
+SoundSets = Array[ExtResource("1_ebqvw")]([ExtResource("2_10rn1"), ExtResource("3_4em71"), ExtResource("4_4em71"), ExtResource("5_10rn1"), ExtResource("4_sqbtj")])

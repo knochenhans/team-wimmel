@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqcroglmfdd3o"]
+
+[ext_resource type="Script" uid="uid://il6ijttrhapg" path="res://addons/TimedAudioStreamPlayer/TimedAudioStreamPlayer2D.cs" id="1_px25d"]
+
+[node name="TimedAudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+bus = &"SFX"
+script = ExtResource("1_px25d")

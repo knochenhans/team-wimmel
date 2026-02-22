@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SimpleSoundSetResource" load_steps=4 format=3 uid="uid://bx1ox31mg8slh"]
+
+[ext_resource type="AudioStream" uid="uid://316myh4e6vk3" path="res://addons/UISoundPlayer/Sounds/click4.wav" id="1_ll87e"]
+[ext_resource type="AudioStream" uid="uid://bke7nw7t26p8f" path="res://addons/UISoundPlayer/Sounds/click3.wav" id="2_ftwa3"]
+[ext_resource type="Script" uid="uid://bcbe7wlf5oben" path="res://addons/SoundSet/SimpleSoundSetResource.cs" id="3_ll87e"]
+
+[resource]
+script = ExtResource("3_ll87e")
+Sounds = Dictionary[String, AudioStream]({
+"click1": ExtResource("1_ll87e"),
+"hover": ExtResource("2_ftwa3")
+})
+metadata/_custom_type_script = "uid://bcbe7wlf5oben"

@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://vaihq65quiht"]
+
+[ext_resource type="Script" uid="uid://m8thuxoshqhq" path="res://addons/SelectionManager/addons/SelectionManager/CursorRect.cs" id="1_4jlm2"]
+[ext_resource type="PackedScene" uid="uid://cp1eywo1wqamq" path="res://addons/SelectionManager/addons/SelectionManager/CursorRectEdge.tscn" id="2_krgrq"]
+
+[node name="CursorRect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_4jlm2")
+
+[node name="CursorEdge1" parent="." instance=ExtResource("2_krgrq")]
+mouse_filter = 2
+
+[node name="CursorEdge2" parent="." instance=ExtResource("2_krgrq")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+rotation = 1.5708
+mouse_filter = 2
+
+[node name="CursorEdge3" parent="." instance=ExtResource("2_krgrq")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 3.14159
+mouse_filter = 2
+
+[node name="CursorEdge4" parent="." instance=ExtResource("2_krgrq")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+rotation = 4.71239
+mouse_filter = 2

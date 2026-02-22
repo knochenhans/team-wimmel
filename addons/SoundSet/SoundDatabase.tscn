@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d104a7gvkd7i3"]
+
+[ext_resource type="Script" uid="uid://f5l6oiy0yfp7" path="res://addons/SoundSet/SoundDatabase.cs" id="1_5ln34"]
+
+[node name="SoundDatabase" type="Node"]
+script = ExtResource("1_5ln34")

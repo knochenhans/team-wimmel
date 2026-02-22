@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SoundSetResource" format=3 uid="uid://co0ounicve3o3"]
+
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="1_qui5d"]
+[ext_resource type="AudioStream" uid="uid://s2rowliwqav0" path="res://addons/SoundSet/Resources/Sounds/Steps/wood_01.wav" id="2_afpqf"]
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="3_qy2px"]
+
+[sub_resource type="Resource" id="Resource_qui5d"]
+script = ExtResource("1_qui5d")
+AudioStream = ExtResource("2_afpqf")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[resource]
+script = ExtResource("3_qy2px")
+ID = "wood"
+SoundSet = [SubResource("Resource_qui5d")]
+metadata/_custom_type_script = "uid://chiidjpp5n41d"

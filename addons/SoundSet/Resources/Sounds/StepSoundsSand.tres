@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="SoundSetResource" format=3 uid="uid://72b85nql3who"]
+
+[ext_resource type="Script" uid="uid://cusbm36i8ljoa" path="res://addons/SoundSet/SoundSetEntryResource.cs" id="1_hndu0"]
+[ext_resource type="AudioStream" uid="uid://cjvhql1n654e3" path="res://Resources/Sounds/steps/sand1.ogg" id="1_nn5m0"]
+[ext_resource type="AudioStream" uid="uid://c6ve8t8spjx61" path="res://Resources/Sounds/steps/sand2.ogg" id="3_aao47"]
+[ext_resource type="Script" uid="uid://chiidjpp5n41d" path="res://addons/SoundSet/SoundSetResource.cs" id="3_k1ccm"]
+[ext_resource type="AudioStream" uid="uid://ba7rwaarx01uq" path="res://Resources/Sounds/steps/sand3.ogg" id="4_3ehkk"]
+[ext_resource type="AudioStream" uid="uid://dmfd72ae6mjiu" path="res://Resources/Sounds/steps/sand4.ogg" id="5_5pm6w"]
+
+[sub_resource type="Resource" id="Resource_2gh4u"]
+script = ExtResource("1_hndu0")
+AudioStream = ExtResource("1_nn5m0")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_1sfqp"]
+script = ExtResource("1_hndu0")
+AudioStream = ExtResource("3_aao47")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_osutw"]
+script = ExtResource("1_hndu0")
+AudioStream = ExtResource("4_3ehkk")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[sub_resource type="Resource" id="Resource_lkd4o"]
+script = ExtResource("1_hndu0")
+AudioStream = ExtResource("5_5pm6w")
+metadata/_custom_type_script = "uid://cusbm36i8ljoa"
+
+[resource]
+script = ExtResource("3_k1ccm")
+ID = "sand"
+SoundSet = [SubResource("Resource_2gh4u"), SubResource("Resource_1sfqp"), SubResource("Resource_osutw"), SubResource("Resource_lkd4o")]
+metadata/_custom_type_script = "uid://chiidjpp5n41d"

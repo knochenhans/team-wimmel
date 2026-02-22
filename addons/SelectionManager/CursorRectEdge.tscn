@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp1eywo1wqamq"]
+
+[ext_resource type="Script" uid="uid://b3yevyr0oxcci" path="res://addons/SelectionManager/CursorRectEdge.cs" id="1_tjw0m"]
+
+[node name="CursorEdge" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tjw0m")
+
+[node name="Line" type="Line2D" parent="."]
+points = PackedVector2Array(1, 0, 0, 0, 0, 1)
+width = 1.0
+begin_cap_mode = 1
+end_cap_mode = 1
