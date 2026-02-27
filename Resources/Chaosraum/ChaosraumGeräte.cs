@@ -28,7 +28,7 @@ public partial class ChaosraumGeräte : GameLocation
                 Stream = loop.Value,
                 Autoplay = true,
                 VolumeDb = 6.0f,
-                PanningStrength = 2.0f,
+                PanningStrength = 3.0f,
             };
             AudioPlayers.Add(loop.Key, audioPlayer);
             LoopStates.Add(loop.Key, true);

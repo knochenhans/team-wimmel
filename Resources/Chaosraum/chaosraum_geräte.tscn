@@ -3,20 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://bqaojecoqhuip" path="res://GameLocation.tscn" id="1_mjvad"]
 [ext_resource type="Script" uid="uid://cphkyqf5lk36s" path="res://Resources/Chaosraum/ChaosraumGeräte.cs" id="2_eagpu"]
 [ext_resource type="Texture2D" uid="uid://2vv16m6br3xl" path="res://Resources/Chaosraum/Images/chaosraum_geräte.png" id="2_mjvad"]
-[ext_resource type="AudioStream" uid="uid://cr3vjpsx2c2kl" path="res://Scenes/Chaosraum/spur1_loop.ogg" id="3_62bq2"]
 [ext_resource type="Script" uid="uid://b1v7q0j4vsufo" path="res://ClickAreaSpawner.cs" id="3_ciq50"]
-[ext_resource type="AudioStream" uid="uid://8r1vnjecxqd8" path="res://Scenes/Chaosraum/spur2_loop.ogg" id="4_vvnjm"]
-[ext_resource type="AudioStream" uid="uid://8pt0y2hgigc0" path="res://Scenes/Chaosraum/spur3_loop.ogg" id="5_ct42t"]
-[ext_resource type="AudioStream" uid="uid://de3cfto4lopkb" path="res://Scenes/Chaosraum/spur4_loop.ogg" id="6_16q44"]
+[ext_resource type="AudioStream" uid="uid://ux0i4a65h80o" path="res://Scenes/Chaosraum/spur1_loop_mono.ogg" id="3_vvnjm"]
+[ext_resource type="AudioStream" uid="uid://dxdlvom1yuv26" path="res://Scenes/Chaosraum/spur2_loop_mono.ogg" id="4_ct42t"]
+[ext_resource type="AudioStream" uid="uid://cvbt52n26f0hu" path="res://Scenes/Chaosraum/spur3_loop_mono.ogg" id="5_16q44"]
+[ext_resource type="AudioStream" uid="uid://wbvos46shmpj" path="res://Scenes/Chaosraum/spur4_loop_mono.ogg" id="6_tm3vq"]
 [ext_resource type="AudioStream" uid="uid://dj0csh2hytum8" path="res://Resources/Chaosraum/Music/stop_click.mp3" id="9_vvnjm"]
 
 [node name="chaosraum_geräte" unique_id=1497449292 instance=ExtResource("1_mjvad")]
 script = ExtResource("2_eagpu")
 Loops = Dictionary[String, AudioStream]({
-"1": ExtResource("3_62bq2"),
-"2": ExtResource("4_vvnjm"),
-"3": ExtResource("5_ct42t"),
-"4": ExtResource("6_16q44")
+"1": ExtResource("3_vvnjm"),
+"2": ExtResource("4_ct42t"),
+"3": ExtResource("5_16q44"),
+"4": ExtResource("6_tm3vq")
 })
 FadeOutDuration = 2.0
 
