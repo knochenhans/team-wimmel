@@ -1,0 +1,9 @@
+Border #746A49
+
+Options Menu Background #432625
+
+Buttons + Title Background #AA8A83
+Buttons + Title Font #242440
+
+Options Font #644140
+
